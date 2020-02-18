@@ -11,7 +11,28 @@
 
 use think\facade\Route;
 
-Route::get('/','@index/Index/index')->name('index');
+# 登录页面的相关路由：将此功能规划在admin模块下
+Route::get('/','@admin/Index/drawLoginPage')->name('loginPage');
+Route::post('/login','@admin/Index/handleLogin')->name('login');
+
+# Admin 页面的相关路由
+Route::get('/admin','@admin/Admin/drawMainPage');
+Route::post('/admin/addNew','@admin/Admin/addNewUser');
+
+Route::get('/admin/modify/:username','@admin/Admin/modifyUser');
+Route::post('/admin/handelModify','@admin/Admin/handelModify');
+
+Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
+# OperatorI 页面的相关路由
+
+# OperatorII 页面的相关路由
+
+# Supervisor 页面的相关路由
+
+# Manager 页面的相关路由
+
+# Normal 页面的相关路由
+
 
 return [
 

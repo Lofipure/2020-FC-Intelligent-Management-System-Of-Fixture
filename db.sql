@@ -41,7 +41,7 @@ create table user(
     id int auto_increment primary key not null ,
     username varchar(64) not null ,         /*账号*/
     name varchar(64) not null ,             /*姓名*/
-    telephone varchar(12) not null ,
+    telephone varchar(32) not null ,
     email varchar(32) not null ,
     password varchar(64) not null ,
     role int not null ,
@@ -63,3 +63,7 @@ create table repairrecord(
     outtime datetime not null ,
     toolid int not null
 ) charset = utf8 , engine = InnoDB;
+
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('admin','王子恒','15391208465','littlebanana@126.com','admin',0,0);
+
