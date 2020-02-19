@@ -13,9 +13,69 @@
 </head>
 <body>
 <br><br>
+<!-- 初级用户提价申请模态框 -->
+<div class="modal fade" tabindex="-1" id="addModel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+                <h4>请求进购新夹具</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="addForm">
+                    <div class="form-group">
+                        <label for="">夹具代码</label>
+                        <input type="text" name="code" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">夹具名称</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">所属大类</label>
+                        <input type="text" name="familyid" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">夹具模组</label>
+                        <input type="text" name="model" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">夹具料号</label>
+                        <input type="text" class="form-control" name="partno">
+                    </div>
+                    <div class="form-group">
+                        <label for="">配备数量</label>
+                        <input type="text" class="form-control" name="upl">
+                    </div>
+                    <div class="form-group">
+                        <label for="">夹具用途</label>
+                        <input type="text" class="form-control" name="usefor">
+                    </div>
+                    <div class=form-group>
+                        <label for="">保养点检周期</label>
+                        <input type="text" class="form-control" name="pmperiod">
+                    </div>
+                    <div class="form-group">
+                        <label for="">负责人</label>
+                        <input type="text" name="owner" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">所属工作部</label>
+                        <input type="text" name="workcell" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="发送请求" class="btn btn-success" id="submit">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <!--<h1>初级用户主界面</h1>-->
-    <a href="" class="btn btn-success btn-xs">提交采购入库申请</a>
+    <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#addModel">提交采购入库申请</a>
     <a href="" class="btn btn-info btn-xs">查看本部门的借出记录</a>
     <br><br>
     <table class="table table-hover table-responsive text-center">
@@ -74,5 +134,26 @@
         {/foreach}
     </table>
 </div>
+<script type="text/javascript">
+    $("#submit").click(function () {
+        let data = $("#addForm").serializeArray();
+        //console.log(data);
+
+        $.ajax({
+            type: 'post',
+            url: 'http://localhost:8000/operatori/addNew',
+            data: data,
+            dataType: 'text',
+            success: function (e) {
+                console.log(e);
+                alert('请求发送成功，等待审核中');
+            },
+            error: function () {
+                alert('请求发送失败');
+            },
+            async: true
+        });
+    });
+</script>
 </body>
 </html>

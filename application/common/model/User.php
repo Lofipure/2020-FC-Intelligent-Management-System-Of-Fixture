@@ -27,16 +27,6 @@ class User extends Model
     }
 
     public function addNewUser($data) {
-        /*$newUser = new User();
-        $newUser->username = $data['username'];
-        $newUser->name = $data['name'];
-        $newUser->password = $data['password'];
-        $newUser->email = $data['email'];
-        $newUser->telephone = $data['telephone'];
-        $newUser->role = $data['role'];
-        $newUser->workcell = $data['workcell'];
-
-        return $newUser->save();*/
         return $this->save($data);
     }
 
