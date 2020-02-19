@@ -5,7 +5,6 @@ use think\Model;
 
 class User extends Model
 {
-    # 检查用户是否登录
     public function handelLogin($data) {
         $ret = $this->where('username','=',$data['username'])->find();
         if(! $ret) {

@@ -13,6 +13,13 @@ create table tool (
     pmperiod varchar(32) not null ,         /*保养周期*/
     owner varchar(32) not null ,            /*负责人*/
     workcell int not null ,                 /*所属工作部*/
+    buystatus int not null default 0 ,
+    /*
+    当前夹具的采购状态
+    - 0：初级用户提交申请
+    - 1：监管员终审
+    - 2：部门经理终审并且投入使用
+    */
     IEstatus int not null default 0 ,
     /*
     当前夹具的进出库状态
@@ -67,3 +74,12 @@ create table repairrecord(
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('admin','王子恒','15391208465','littlebanana@126.com','admin',0,0);
 
+/* 一本正经的捏造数据 */
+insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
+(
+ 'fctext01','服创测试数据01','测试大类01','测试模组01','FC001',5,'用途1','30','Lofipure',1,2,0,0
+);
+insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
+(
+    'fctext02','服创测试数据02','测试大类01','测试模组01','FC002',3,'用途2','30','Lofipure',1,2,0,0
+);
