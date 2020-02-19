@@ -28,7 +28,7 @@ Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
 # OperatorI 页面的相关路由
 Route::get('/operatori/:workcell','@operatori/Operatori/showMainPage');
 Route::post('/operatori/addNew','@operatori/Operatori/addNew');
-
+Route::get('/operator/submitApp/:code','@operatori/Operatori/submitRepairApplication');
 
 # OperatorII 页面的相关路由
 

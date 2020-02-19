@@ -35,7 +35,6 @@ create table tool (
     - 2：OperatorII已阅并且维修中
     */
 )charset = utf8 , engine = InnoDB;
-
 /*
     admin: 0
     operatorI: 1
@@ -74,35 +73,35 @@ create table repairrecord(
 /* 一本正经的捏造数据 */
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext01','服创测试数据01','测试大类01','测试模组01','FC001',5,'用途1','30','Lofipure',1,2,0,0
+ 'fctext01','服创测试数据01','测试大类01','测试模组01','FC001',5,'用途1','30','Lofipure',1,0,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
-    'fctext02','服创测试数据02','测试大类01','测试模组01','FC002',3,'用途2','30','Lofipure',1,2,0,0
+ 'fctext02','服创测试数据02','测试大类01','测试模组01','FC002',3,'用途2','30','Lofipure',1,0,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
-    'fctext03','服创测试数据03','测试大类02','测试模组02','FC003',3,'用途2','30','Lofipure',2,2,0,0
+ 'fctext03','服创测试数据03','测试大类02','测试模组02','FC003',3,'用途2','30','Lofipure',2,0,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
-    'fctext04','服创测试数据04','测试大类02','测试模组02','FC004',3,'用途2','30','Lofipure',2,2,0,0
+ 'fctext04','服创测试数据04','测试大类02','测试模组02','FC004',3,'用途2','30','Lofipure',2,0,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
-    'fctext05','服创测试数据05','测试大类03','测试模组02','FC005',3,'用途2','30','Lofipure',3,2,0,0
+ 'fctext05','服创测试数据05','测试大类03','测试模组02','FC005',3,'用途2','30','Lofipure',3,0,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
-    'fctext06','服创测试数据06','测试大类03','测试模组02','FC006',3,'用途2','30','Lofipure',4,2,0,0
+ 'fctext06','服创测试数据06','测试大类03','测试模组02','FC006',3,'用途2','30','Lofipure',4,0,0,0
 );
 
-
+/* 管理员 */
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('adminone','管理员一号','15391208465','littlebanana@126.com','admin',0,0);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('admintwo','管理员一号','18747238458','littlebanana@163.com','admin',0,0);
-
+/* 初级用户 */
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorone','初级用户一号','15391208465','littlebanana@126.com','admin',1,1);
 insert into user (username, name, telephone, email, password, role, workcell)
@@ -111,3 +110,12 @@ insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorthree','初级用户三号','15391208465','littlebanana@126.com','admin',1,3);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorfour','初级用户四号','18747238458','littlebanana@163.com','admin',1,4);
+/* 高级用户 */
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('operatorIIone','高级用户一号','15391208465','littlebanana@126.com','admin',2,1);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('operatorIItwo','高级用户二号','18747238458','littlebanana@163.com','admin',2,2);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('operatorIIthree','高级用户三号','15391208465','littlebanana@126.com','admin',2,3);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('operatorIIfour','高级用户四号','18747238458','littlebanana@163.com','admin',2,4);
