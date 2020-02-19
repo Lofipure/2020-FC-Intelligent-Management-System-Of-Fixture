@@ -5,8 +5,8 @@ use think\Model;
 
 class Tool extends Model
 {
-   public function getAll() {
-       return $this->select();
+   public function getAll($workcell) {
+       return $this->where('workcell','=',$workcell)->select();
    }
 
    public function addNewTool($data) {

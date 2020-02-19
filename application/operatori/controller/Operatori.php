@@ -7,8 +7,8 @@ use think\Request;
 
 class Operatori extends Controller
 {
-    public function showMainPage() {
-        $allTool = model('tool')->getAll();
+    public function showMainPage($workcell) {
+        $allTool = model('tool')->getAll($workcell);
         //dump($allTool);
         return view('operatori@operatori/mainPage',compact('allTool'));
     }

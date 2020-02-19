@@ -22,10 +22,12 @@ class Index extends Controller
         $ret = model('user')->handelLogin($data);
         if($ret != -1) {
             $name = model('user')->funGetName($data);
+            $workcell = model('user')->funGetWorkcell($data);
+
             if($ret == 0) {
                 $this->success('登录成功，欢迎管理员：'.$name,'http://localhost:8000/admin');
             } elseif ($ret == 1) {
-                $this->success('登录成功，欢迎初级用户：'.$name,'http://localhost:8000/operatori');
+                $this->success('登录成功，欢迎初级用户：'.$name,'http://localhost:8000/operatori/'.$workcell);
             } elseif ($ret == 2) {
                 $this->success('登录成功，欢迎高级用户：'.$name);
             } elseif ($ret == 3) {

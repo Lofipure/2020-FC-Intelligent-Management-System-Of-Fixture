@@ -137,7 +137,6 @@
 <script type="text/javascript">
     $("#submit").click(function () {
         let data = $("#addForm").serializeArray();
-        //console.log(data);
 
         $.ajax({
             type: 'post',
@@ -147,6 +146,7 @@
             success: function (e) {
                 console.log(e);
                 alert('请求发送成功，等待审核中');
+                location.reload();
             },
             error: function () {
                 alert('请求发送失败');

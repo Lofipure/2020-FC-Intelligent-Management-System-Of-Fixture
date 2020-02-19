@@ -22,6 +22,10 @@ class User extends Model
         return $ret['name'];
     }
 
+    public function funGetWorkcell($data) {
+        $ret = $this->where('username','=',$data['username'])->find();
+        return $ret['workcell'];
+    }
     public function getAllUser() {
         return $this->select();
     }

@@ -23,9 +23,13 @@ Route::get('/admin/modify/:username','@admin/Admin/modifyUser');
 Route::post('/admin/handelModify','@admin/Admin/handelModify');
 
 Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
+
+
 # OperatorI 页面的相关路由
-Route::get('/operatori','@operatori/Operatori/showMainPage');
+Route::get('/operatori/:workcell','@operatori/Operatori/showMainPage');
 Route::post('/operatori/addNew','@operatori/Operatori/addNew');
+
+
 # OperatorII 页面的相关路由
 
 # Supervisor 页面的相关路由
