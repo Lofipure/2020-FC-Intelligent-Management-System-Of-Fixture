@@ -23,4 +23,10 @@ class Tool extends Model
        $tool = Tool::get(self::where('code','=',$code));
        return $tool->workcell;
    }
+
+   public function handelIeStatus($code) {
+       $tool = Tool::get(self::where('code','=',$code));
+       $tool->IEstatus = 2;
+       return $tool->save();
+   }
 }

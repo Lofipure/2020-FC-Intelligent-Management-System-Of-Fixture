@@ -29,7 +29,7 @@ Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
 Route::get('/operatori/:workcell','@operatori/Operatori/showMainPage');
 Route::post('/operatori/addNew','@operatori/Operatori/addNew');
 Route::get('/operator/submitApp/:code','@operatori/Operatori/submitRepairApplication');
-
+Route::get('/operator/handelApp/:code','@operatori/Operatori/handelIeStatus');
 # OperatorII 页面的相关路由
 
 # Supervisor 页面的相关路由

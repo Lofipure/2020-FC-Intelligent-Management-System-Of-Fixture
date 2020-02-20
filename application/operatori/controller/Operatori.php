@@ -26,4 +26,13 @@ class Operatori extends Controller
           $this->error('提交失败，请重新提交','http://localhost:8000/operatori/'.$workcell);
         }
     }
+
+    public function handelIeStatus($code) {
+        $workcell = model('tool')->fromCodeGetWorkcell($code);
+        if(model('tool')->handelIeStatus($code)) {
+            $this->success('处理线上工人请求成功','http://localhost:8000/operatori/'.$workcell);
+        } else {
+            $this->error('处理失败，请重新操作','http://localhost:8000/operatori/'.$workcell);
+        }
+    }
 }
