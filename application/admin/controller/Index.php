@@ -25,7 +25,7 @@ class Index extends Controller
             $workcell = model('user')->funGetWorkcell($data);
 
             if($ret == 0) {
-                $this->success('登录成功，欢迎管理员：'.$name,'http://localhost:8000/admin');
+                $this->success('登录成功，欢迎管理员：'.$name,'http://localhost:8000/admin/');
             } elseif ($ret == 1) {
                 $this->success('登录成功，欢迎初级用户：'.$name,'http://localhost:8000/operatori/'.$workcell);
             } elseif ($ret == 2) {
@@ -35,7 +35,7 @@ class Index extends Controller
             } elseif($ret == 4) {
                 $this->success('登录成功，欢迎Workcell经理：'.$name);
             } else {
-                $this->success('登录成功，欢迎普通用户：'.$name);
+                $this->success('登录成功，欢迎普通用户：'.$name,'http://localhost:8000/normal/'.$data['username']);
             }
         } else {
             $this->error('用户名或密码错误，请重新登录。');

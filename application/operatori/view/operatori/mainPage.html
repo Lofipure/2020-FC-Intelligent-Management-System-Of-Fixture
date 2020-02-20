@@ -76,7 +76,7 @@
 <div class="container">
     <!--<h1>初级用户主界面</h1>-->
     <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#addModel">提交采购入库申请</a>
-    <a href="" class="btn btn-info btn-xs">查看本部门的借出记录</a>
+    <a href="http://localhost:8000/operatori/seeAllRecord/{$workcell}" class="btn btn-info btn-xs">查看本部门的借出记录</a>
     <br><br>
     <table class="table table-hover table-responsive text-center">
         <tr>
@@ -110,11 +110,11 @@
                 <ul>
                     <li>
                         {if $element.IEstatus == 1}
-                        有用户请求使用该夹具
+                            {$element.IEnormal}请求使用该夹具
                         {elseif  $element.IEstatus == 2/}
-                        已借出，等待归还
+                            已借出，等待{$element.IEnormal}归还
                         {else }
-                        可借
+                            可借
                         {/if}
                     </li>
                     <li>
@@ -134,8 +134,8 @@
                 </ul>
             </td>
             <td>
-                <a href="http://localhost:8000/operator/handelApp/{$element.code}" class="btn btn-info btn-xs">处理进出库信息</a><br>
-                <a href="http://localhost:8000/operator/submitApp/{$element.code}" class="btn btn-warning btn-xs">提交报修申请</a>
+                <a href="http://localhost:8000/operatori/handelApp/{$element.code}" class="btn btn-info btn-xs">同意员工请求</a><br>
+                <a href="http://localhost:8000/operatori/submitApp/{$element.code}" class="btn btn-warning btn-xs">提交报修申请</a>
             </td>
         </tr>
         {/foreach}

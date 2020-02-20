@@ -21,6 +21,7 @@ create table tool (
     - 2：部门经理终审并且投入使用
     */
     IEstatus int not null default 0 ,
+    IEnormal varchar(32) not null default -1,
     /*
     当前夹具的进出库状态
     - 0：在库中，可借或者线上工人归还
@@ -57,9 +58,10 @@ create table user(
 /*进出库记录表*/
 create table IErecord(
     id int auto_increment primary key not null ,
-    intime datetime not null ,
-    outtime datetime not null ,
-    toolid int not null
+    lendpeople varchar(32) not null ,
+    intime datetime default null ,
+    outtime datetime default null ,
+    toolid varchar(32) not null
 ) charset = utf8 , engine = InnoDB;
 
 /*报修返厂记录表*/
@@ -119,3 +121,11 @@ insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorIIthree','高级用户三号','15391208465','littlebanana@126.com','admin',2,3);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorIIfour','高级用户四号','18747238458','littlebanana@163.com','admin',2,4);
+/* 普通用户 */
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('normalone','普通用户一号','15391208465','littlebanana@126.com','admin',5,0);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('normaltwo','普通用户二号','18747238458','littlebanana@163.com','admin',5,0);
+
+/*update tool set IEnormal = -1;
+update tool set IEstatus = 0;*/
