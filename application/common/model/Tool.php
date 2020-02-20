@@ -56,12 +56,4 @@ class Tool extends Model
    public function fromWorkcellGetCode($workcell) {
         return Tool::where('workcell','=',$workcell)->column('code');
    }
-
-   /*public function fromCodeGetAllInfo($code) {
-        $ret = array();
-        foreach ($code as $index => $element) {
-            array_push($ret,Tool::where('code','=',$element));
-        }
-        return $ret;
-   }*/
 }

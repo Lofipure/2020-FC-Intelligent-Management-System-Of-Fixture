@@ -18,10 +18,8 @@ Route::post('/login','@admin/Index/handleLogin')->name('login');
 # Admin 页面的相关路由
 Route::get('/admin','@admin/Admin/drawMainPage');
 Route::post('/admin/addNew','@admin/Admin/addNewUser');
-
 Route::get('/admin/modify/:username','@admin/Admin/modifyUser');
 Route::post('/admin/handelModify','@admin/Admin/handelModify');
-
 Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
 
 

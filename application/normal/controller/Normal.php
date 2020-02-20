@@ -1,7 +1,6 @@
 <?php
 
 namespace app\normal\controller;
-
 use think\Controller;
 
 class Normal extends Controller
@@ -12,9 +11,6 @@ class Normal extends Controller
     }
 
     public function lendTool($code,$username) {
-        /*return $code;*/
-        /*return $_GET['username'];*/
-        /*return $username;*/
         if(model('tool')->normalLendTool($code,$username)) {
             $this->success('请求成功，等待初级用户审批','http://localhost:8000/normal/'.$username);
         } else {

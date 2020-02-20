@@ -24,7 +24,13 @@
         <tr>
             <td>{$element.toolid}</td>
             <td>{$element.outtime}</td>
-            <td>{$element.intime}</td>
+            <td>
+                {if $element.intime}
+                {$element.intime}
+                {else/}
+                未归还
+                {/if}
+            </td>
             <td>{$element.lendpeople}</td>
         </tr>
         {/foreach}

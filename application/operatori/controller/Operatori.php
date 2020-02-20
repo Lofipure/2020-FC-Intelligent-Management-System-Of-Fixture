@@ -28,7 +28,7 @@ class Operatori extends Controller
     }
 
     public function handelIeStatus($code) {
-        $workcell = model('tool')->fromCodeGetWorkcell($code);
+        $workcell = model( 'tool')->fromCodeGetWorkcell($code);
         $username = model('tool')->fromCodeGetNormalUsername($code);
         if(model('tool')->handelIeStatus($code) && model('ierecord')->addRecord($username,$code)) {
             $this->success('处理线上工人请求成功','http://localhost:8000/operatori/'.$workcell);
@@ -39,18 +39,25 @@ class Operatori extends Controller
 
     public function seeAllRecord($workcell) {
         $codeInWorkcell = model('tool')->fromWorkcellGetCode($workcell);
-        $codeInIE = model('ierecord')->getAllCode();
+        $infoInIE = model('ierecord')->getAllInfo();
+        /*dump($infoInIE);
+        dump($codeInWorkcell);*/
 
-        $recode = array();
+        $ret = array();
+        foreach ($infoInIE as $index => $item) {
+            if(in_array($item['toolid'],$codeInWorkcell)) {
+                array_push($ret,$item);
+            }
+        }
+        /*dump($ret);*/
+        return  view('operatori@operatori/allRecordInWorkcell',compact('ret'));
+       /* $recode = array();
         foreach($codeInWorkcell as $index => $element) {
             if(in_array($element,$codeInIE)) {
-                //dump($element);
                 array_push($recode,$element);
             }
         }
-        //dump($recode);
         $ret = model('ierecord')->fromCodeGetAllInfo($recode);
-        //dump($ret);
-        return view('operatori@operatori/allRecordInWorkcell',compact('ret'));
+        return view('operatori@operatori/allRecordInWorkcell',compact('ret'));*/
     }
 }

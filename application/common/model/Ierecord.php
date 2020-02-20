@@ -14,13 +14,16 @@ class Ierecord extends Model
     }
 
     public function updateRecord($code) {
-        $record = Tool::get(self::where('toolid','=',$code));
+        //$record = Tool::get(self::where('toolid','=',$code));
+        $record = Ierecord::get(self::where('toolid','=',$code)->where('intime','=',NULL));
+        //$record = $this->where('toolid','=',$code)->where('intime','<>',NULL)->select();
         $record->intime = date('Y-m-d H:i:s');
         return $record->save();
+
     }
 
-    public function getAllCode() {
-        return Ierecord::column('toolid');
+    public function getAllInfo() {
+        return Ierecord::select();
     }
 
     public function fromCodeGetAllInfo($code) {
