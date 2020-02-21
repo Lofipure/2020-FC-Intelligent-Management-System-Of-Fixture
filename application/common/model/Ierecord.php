@@ -5,11 +5,12 @@ use think\Model;
 
 class Ierecord extends Model
 {
-    public function addRecord($username,$code) {
+    public function addRecord($username,$code,$operator) {
         $record = new ierecord;
         $record->lendpeople = $username;
         $record->outtime = date('Y-m-d H:i:s');
         $record->toolid = $code;
+        $record->operator = $operator;
         return $record->save();
     }
 

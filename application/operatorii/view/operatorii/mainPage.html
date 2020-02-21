@@ -55,9 +55,9 @@
             </td>
             <td>
                 {if $element.repairstatus == 2}
-                <a href="http://localhost:8000//operatorii/finishRepair/{$element.code}" class="btn btn-success btn-xs">检修完成</a>
+                <a href="http://localhost:8000//operatorii/finishRepair/{$element.code}/{$username}" class="btn btn-success btn-xs">检修完成</a>
                 {elseif $element.repairstatus == 1}
-                <a href="http://localhost:8000/operatorii/handelRepair/{$element.code}" class="btn btn-warning btn-xs">处理报修申请</a>
+                <a href="http://localhost:8000/operatorii/handelRepair/{$element.code}/{$username}" class="btn btn-warning btn-xs">处理报修申请</a>
                 {elseif $element.repairstatus == 0}
                 <a href="" class="btn btn-info btn-xs disabled">无需操作</a>
                 {/if}

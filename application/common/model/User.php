@@ -55,7 +55,13 @@ class User extends Model
     }
 
     public function fromUsernameGetWorkcell($username) {
-        $user = User::get(self::where('username','=',$username));
-        return $user->workcell;
+        //$user = User::get(self::where('username','=',$username));
+        $user = self::where('username','=',$username)->find();
+        return $user['workcell'];
+    }
+
+    public function fromUsernameGetName($retusername) {
+        $user = User::get(self::where('username','=',$retusername));
+        return $user['name'];
     }
 }

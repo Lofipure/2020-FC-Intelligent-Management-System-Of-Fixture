@@ -59,6 +59,7 @@ create table user(
 create table IErecord(
     id int auto_increment primary key not null ,
     lendpeople varchar(32) not null ,
+    operator varchar(32) not null ,
     intime datetime default null ,
     outtime datetime default null ,
     toolid varchar(32) not null
@@ -70,7 +71,9 @@ create table repairrecord(
     intime datetime default null ,
     outtime datetime default null ,
     posttime datetime default null ,
-    toolid varchar(32) not null
+    toolid varchar(32) not null ,
+    hander varchar(32) null ,
+    poster varchar(32) not null
 ) charset = utf8 , engine = InnoDB;
 
 /* 一本正经的捏造数据 */
@@ -104,6 +107,7 @@ insert into user (username, name, telephone, email, password, role, workcell)
 values ('adminone','管理员一号','15391208465','littlebanana@126.com','admin',0,0);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('admintwo','管理员一号','18747238458','littlebanana@163.com','admin',0,0);
+
 /* 初级用户 */
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorone','初级用户一号','15391208465','littlebanana@126.com','admin',1,1);
@@ -113,6 +117,7 @@ insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorthree','初级用户三号','15391208465','littlebanana@126.com','admin',1,3);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorfour','初级用户四号','18747238458','littlebanana@163.com','admin',1,4);
+
 /* 高级用户 */
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorIIone','高级用户一号','15391208465','littlebanana@126.com','admin',2,1);
@@ -122,8 +127,30 @@ insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorIIthree','高级用户三号','15391208465','littlebanana@126.com','admin',2,3);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('operatorIIfour','高级用户四号','18747238458','littlebanana@163.com','admin',2,4);
+
 /* 普通用户 */
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('normalone','普通用户一号','15391208465','littlebanana@126.com','admin',5,0);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('normaltwo','普通用户二号','18747238458','littlebanana@163.com','admin',5,0);
+
+/* 监管员 */
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('supervisorone','监管员一号','15391208465','littlebanana@126.com','admin',3,1);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('supervisortwo','监管员二号','15391208465','littlebanana@126.com','admin',3,2);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('supervisorthree','监管员三号','15391208465','littlebanana@126.com','admin',3,3);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('supervisorfour','监管员四号','15391208465','littlebanana@126.com','admin',3,4);
+
+/* Workcell经理 */
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('managerone','经理一号','15391208465','littlebanana@126.com','admin',4,1);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('managertwo','经理二号','15391208465','littlebanana@126.com','admin',4,2);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('managerthree','经理三号','15391208465','littlebanana@126.com','admin',4,3);
+insert into user (username, name, telephone, email, password, role, workcell)
+values ('managerfour','经理四号','15391208465','littlebanana@126.com','admin',4,4);
+

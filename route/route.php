@@ -9,11 +9,15 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+/*
+ * 项目重新部署：2020-2-21
+ * 更改OperatorI和OperatorII的登录路由方式
+ * */
 use think\facade\Route;
 
 # 登录页面的相关路由：将此功能规划在admin模块下
-Route::get('/','@admin/Index/drawLoginPage')->name('loginPage');
-Route::post('/login','@admin/Index/handleLogin')->name('login');
+Route::get('/','@admin/Index/drawLoginPage');
+Route::post('/login','@admin/Index/handleLogin');
 
 # Admin 页面的相关路由
 Route::get('/admin','@admin/Admin/drawMainPage');
@@ -24,15 +28,16 @@ Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
 
 
 # OperatorI 页面的相关路由
-Route::get('/operatori/:workcell','@operatori/Operatori/showMainPage');
+Route::get('/operatori/:username','@operatori/Operatori/showMainPage');
 Route::post('/operatori/addNew','@operatori/Operatori/addNew');
-Route::get('/operatori/submitApp/:code','@operatori/Operatori/submitRepairApplication');
-Route::get('/operatori/handelApp/:code','@operatori/Operatori/handelIeStatus');
+Route::get('/operatori/submitApp/:code/:username','@operatori/Operatori/submitRepairApplication');
+Route::get('/operatori/handelApp/:code/:retusername','@operatori/Operatori/handelIeStatus');
 Route::get('/operatori/seeAllRecord/:workcell','@operatori/Operatori/seeAllRecord');
+
 # OperatorII 页面的相关路由
-Route::get('/operatorii/:workcell','@operatorii/Operatorii/showMainPage');
-Route::get('/operatorii/handelRepair/:code','@operatorii/Operatorii/handelRepair');
-Route::get('/operatorii/finishRepair/:code','@operatorii/Operatorii/finishRepair');
+Route::get('/operatorii/:username','@operatorii/Operatorii/showMainPage');
+Route::get('/operatorii/handelRepair/:code/:username','@operatorii/Operatorii/handelRepair');
+Route::get('/operatorii/finishRepair/:code/:username','@operatorii/Operatorii/finishRepair');
 Route::get('/operatorii/ierecord/:workcell','@operatorii/Operatorii/seeAllIeRecord');
 Route::get('/operatorii/showRepair/:workcell','@operatorii/Operatorii/showRepairRecord');
 # Supervisor 页面的相关路由

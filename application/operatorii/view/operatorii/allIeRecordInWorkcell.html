@@ -19,6 +19,7 @@
             <th>借出时间</th>
             <th>归还时间</th>
             <th>使用人</th>
+            <th>操作人</th>
         </tr>
         {foreach $ret as $index => $element}
         <tr>
@@ -32,6 +33,7 @@
                 {/if}
             </td>
             <td>{$element.lendpeople}</td>
+            <td>{$element.operator}</td>
         </tr>
         {/foreach}
 

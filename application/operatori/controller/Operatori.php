@@ -7,9 +7,10 @@ use think\Request;
 
 class Operatori extends Controller
 {
-    public function showMainPage($workcell) {
+    public function showMainPage($username) {
+        $workcell = model('user')->fromUsernameGetWorkcell($username);
         $allTool = model('tool')->getAll($workcell);
-        return view('operatori@operatori/mainPage',compact('allTool','workcell'));
+        return view('operatori@operatori/mainPage',compact('allTool','workcell','username'));
     }
 
     public function addNew(Request $request) {
@@ -17,23 +18,24 @@ class Operatori extends Controller
 
     }
 
-    public function submitRepairApplication($code) {
-        $workcell = model('tool')->fromCodeGetWorkcell($code);
-        model('repairrecord')->operatoriPostRepair($code);
+    public function submitRepairApplication($code,$username) {
+        model('repairrecord')->operatoriPostRepair($code,$username);
         if(model('tool')->operatorISubmitRepairApplication($code)) {
-            $this->success('请求提交成功，等待处理','http://localhost:8000/operatori/'.$workcell);
+            $this->success('请求提交成功，等待处理','http://localhost:8000/operatori/'.$username);
         } else {
-          $this->error('提交失败，请重新提交','http://localhost:8000/operatori/'.$workcell);
+            $this->error('提交失败，请重新提交','http://localhost:8000/operatori/'.$username);
         }
     }
 
-    public function handelIeStatus($code) {
-        $workcell = model( 'tool')->fromCodeGetWorkcell($code);
+    public function handelIeStatus($code,$retusername) {
         $username = model('tool')->fromCodeGetNormalUsername($code);
-        if(model('tool')->handelIeStatus($code) && model('ierecord')->addRecord($username,$code)) {
-            $this->success('处理线上工人请求成功','http://localhost:8000/operatori/'.$workcell);
+        $lend = model('user')->fromUsernameGetName($username);
+        $handelName = model('user')->fromUsernameGetName($retusername);
+        //dump($handelName);
+        if(model('tool')->handelIeStatus($code) && model('ierecord')->addRecord($lend,$code,$handelName)) {
+            $this->success('处理线上工人请求成功','http://localhost:8000/operatori/'.$retusername);
         } else {
-            $this->error('处理失败，请重新操作','http://localhost:8000/operatori/'.$workcell);
+            $this->error('处理失败，请重新操作','http://localhost:8000/operatori/'.$retusername);
         }
     }
 
