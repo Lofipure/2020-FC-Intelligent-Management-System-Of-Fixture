@@ -29,7 +29,7 @@ class Index extends Controller
             } elseif ($ret == 1) {
                 $this->success('登录成功，欢迎初级用户：'.$name,'http://localhost:8000/operatori/'.$workcell);
             } elseif ($ret == 2) {
-                $this->success('登录成功，欢迎高级用户：'.$name);
+                $this->success('登录成功，欢迎高级用户：'.$name,'http://localhost:8000/operatorii/'.$workcell);
             } elseif ($ret == 3) {
                 $this->success('登录成功，欢迎监管员：'.$name);
             } elseif($ret == 4) {

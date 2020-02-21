@@ -126,6 +126,3 @@ insert into user (username, name, telephone, email, password, role, workcell)
 values ('normalone','普通用户一号','15391208465','littlebanana@126.com','admin',5,0);
 insert into user (username, name, telephone, email, password, role, workcell)
 values ('normaltwo','普通用户二号','18747238458','littlebanana@163.com','admin',5,0);
-
-/*update tool set IEnormal = -1;
-update tool set IEstatus = 0;*/

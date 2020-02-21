@@ -56,4 +56,16 @@ class Tool extends Model
    public function fromWorkcellGetCode($workcell) {
         return Tool::where('workcell','=',$workcell)->column('code');
    }
+
+   public function operatorIIhandelRepair($code) {
+        $tool = Tool::get(self::where('code','=',$code));
+        $tool->repairstatus = 2;
+        return $tool->save();
+   }
+
+   public function finishRepair($code) {
+        $tool = Tool::get(self::where('code','=',$code));
+        $tool->repairstatus = 0;
+        return $tool->save();
+   }
 }
