@@ -53,4 +53,9 @@ class User extends Model
         $user = User::get(self::where('username','=',$username));
         return $user->delete();
     }
+
+    public function fromUsernameGetWorkcell($username) {
+        $user = User::get(self::where('username','=',$username));
+        return $user->workcell;
+    }
 }

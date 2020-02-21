@@ -68,4 +68,5 @@ class Tool extends Model
         $tool->repairstatus = 0;
         return $tool->save();
    }
+
 }

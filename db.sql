@@ -28,7 +28,7 @@ create table tool (
     - 1：线上工人发出请求
     - 2：OperatorI 处理请求，等待归还
     */
-    repairstatus int not null default 0
+    repairstatus int not null default 0 ,
     /*
     当前夹具的报修状态
     - 0：线上可用
@@ -67,9 +67,10 @@ create table IErecord(
 /*报修返厂记录表*/
 create table repairrecord(
     id int auto_increment primary key not null ,
-    intime datetime not null ,
-    outtime datetime not null ,
-    toolid int not null
+    intime datetime default null ,
+    outtime datetime default null ,
+    posttime datetime default null ,
+    toolid varchar(32) not null
 ) charset = utf8 , engine = InnoDB;
 
 /* 一本正经的捏造数据 */

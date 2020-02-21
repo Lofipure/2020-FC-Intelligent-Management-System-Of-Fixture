@@ -33,6 +33,8 @@ Route::get('/operatori/seeAllRecord/:workcell','@operatori/Operatori/seeAllRecor
 Route::get('/operatorii/:workcell','@operatorii/Operatorii/showMainPage');
 Route::get('/operatorii/handelRepair/:code','@operatorii/Operatorii/handelRepair');
 Route::get('/operatorii/finishRepair/:code','@operatorii/Operatorii/finishRepair');
+Route::get('/operatorii/ierecord/:workcell','@operatorii/Operatorii/seeAllIeRecord');
+Route::get('/operatorii/showRepair/:workcell','@operatorii/Operatorii/showRepairRecord');
 # Supervisor 页面的相关路由
 
 

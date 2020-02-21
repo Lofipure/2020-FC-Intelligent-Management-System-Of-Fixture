@@ -19,7 +19,7 @@ class Operatori extends Controller
 
     public function submitRepairApplication($code) {
         $workcell = model('tool')->fromCodeGetWorkcell($code);
-
+        model('repairrecord')->operatoriPostRepair($code);
         if(model('tool')->operatorISubmitRepairApplication($code)) {
             $this->success('请求提交成功，等待处理','http://localhost:8000/operatori/'.$workcell);
         } else {
