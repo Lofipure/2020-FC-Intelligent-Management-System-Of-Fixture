@@ -46,6 +46,7 @@ Route::get('/supervisor/:username','@supervisor/Supervisor/showMainPage');
 Route::get('/supervisor/ierecord/:workcell','@supervisor/Supervisor/seeAllIeRecord');
 Route::get('/supervisor/rerecord/:workcell','@supervisor/Supervisor/showRepairRecord');
 Route::get('/supervisor/trialDestory/:code/:username','@supervisor/Supervisor/trialDestory');
+Route::get('/supervisor/browseDestoryRecord/:username','@supervisor/Supervisor/browseDestoryRecord');
 # Manager 页面的相关路由
 
 

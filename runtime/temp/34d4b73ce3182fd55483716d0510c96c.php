@@ -1,4 +1,4 @@
-<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\supervisor\view\Supervisor\mainPage.html";i:1582341490;}*/ ?>
+<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\supervisor\view\Supervisor\mainPage.html";i:1582356581;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,6 +17,7 @@
     <br>
     <a href="http://localhost:8000/supervisor/ierecord/<?php echo htmlentities($workcell); ?>" class="btn btn-success btn-xs">查看部门夹具进出库记录</a>
     <a href="http://localhost:8000/supervisor/rerecord/<?php echo htmlentities($workcell); ?>" class="btn btn-success btn-xs">查看部门夹具报修记录</a>
+    <a href="http://localhost:8000/supervisor/browseDestoryRecord/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">查看部门夹具报废记录</a>
     <br><br>
     <table class="table-responsive table table-hover">
         <tr>

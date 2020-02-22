@@ -36,7 +36,6 @@ class Supervisor extends Controller
                 array_push($ret,$item);
             }
         }
-
         return view('supervisor@Supervisor/allRerecordInWorkcell',compact('ret'));
     }
 
@@ -46,7 +45,6 @@ class Supervisor extends Controller
          * 1：改变tool中的destory为2
          * 2：destoryrecord中更改记录
          * */
-
         $sta1 = model('tool')->firstTrialDestory($code);
         $sta2 = model('destoryrecord')->firstTrialDestoryRecord($code,$username);
         if($sta2 && $sta1) {
@@ -54,5 +52,19 @@ class Supervisor extends Controller
         } else {
             $this->error('请求处理失败','http://localhost:8000/supervisor/'.$username);
         }
+    }
+
+    public function browseDestoryRecord($username) {
+        $workcell = model('user')->fromUsernameGetWorkcell($username);
+        $codeInWorkcell = model('tool')->fromWorkcellGetCode($workcell);
+        $infoInDe = model('destoryrecord')->getAllInfo();
+        $ret = array();
+
+        foreach ($infoInDe as $index => $item) {
+            if(in_array($item['toolcode'],$codeInWorkcell)) {
+                array_push($ret,$item);
+            }
+        }
+        return view('supervisor@Supervisor/allDerecordInWorkcell',compact('ret'));
     }
 }

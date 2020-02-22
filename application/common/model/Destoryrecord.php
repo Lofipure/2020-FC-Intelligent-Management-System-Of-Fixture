@@ -16,10 +16,14 @@ class Destoryrecord extends Model
 
     public function firstTrialDestoryRecord($code,$username) {
         $record = Destoryrecord::get(self::where('toolcode','=',$code)->where('handtime','=',NULL));
-        //$record = Destoryrecord::where('toolcode','=',$code)->where('handtime','=',NULL);
+
         $record->hander = model('user')->fromUsernameGetName($username);
         $record->handtime = date('Y-m-d H:i:s');
 
         return $record->save();
+    }
+
+    public function getAllInfo() {
+        return Destoryrecord::select();
     }
 }

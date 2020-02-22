@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <tr>
+            <th>夹具代码</th>
+            <th>提交时间</th>
+            <th>提交人</th>
+            <th>初审时间</th>
+            <th>初审人</th>
+            <th>终审时间</th>
+            <th>终审人</th>
+        </tr>
+        {foreach $ret as $index => $element}
+        <th>{$element.toolcode}</th>
+        <th>{$element.pottime}</th>
+        <th>{$element.poster}</th>
+        <th>
+            {if $element.handtime}
+            {$element.handtime}
+            {else/}
+            监管员未初审
+            {/if}
+        </th>
+        <th>
+            {if $element.hander}
+            {$element.hander}
+            {else/}
+            监管员未初审
+            {/if}
+        </th>
+        <th>
+            {if $element.finalhandtime}
+            {$element.finalhandtime}
+            {else/}
+            经理未终审
+            {/if}
+        </th>
+        <th>
+            {if $element.finalhander}
+            {$element.finalhander}
+            {else/}
+            经理未终审
+            {/if}
+        </th>
+        {/foreach}
+    </table>
+</div>
+</body>
+</html>
