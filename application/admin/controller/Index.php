@@ -31,7 +31,7 @@ class Index extends Controller
             } elseif ($ret == 2) {
                 $this->success('登录成功，欢迎高级用户：'.$name,'http://localhost:8000/operatorii/'.$data['username']);
             } elseif ($ret == 3) {
-                $this->success('登录成功，欢迎监管员：'.$name);
+                $this->success('登录成功，欢迎监管员：'.$name,'http://localhost:8000/supervisor/'.$data['username']);
             } elseif($ret == 4) {
                 $this->success('登录成功，欢迎Workcell经理：'.$name);
             } else {

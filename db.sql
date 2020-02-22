@@ -35,6 +35,14 @@ create table tool (
     - 1：OperatorI提交请求等待OperatorII处理
     - 2：OperatorII已阅并且维修中
     */
+    destorystatus int not null default 0
+    /*
+    当前夹具报废处理状态
+    - 0：可用
+    - 1：OperatorII提出申请
+    - 2：Supervisor初审完成
+    - 3：Manager终审完成，销毁
+    */
 )charset = utf8 , engine = InnoDB;
 /*
     admin: 0
@@ -75,6 +83,29 @@ create table repairrecord(
     hander varchar(32) null ,
     poster varchar(32) not null
 ) charset = utf8 , engine = InnoDB;
+
+/* 报废信息记录表 */
+create table destoryrecord(
+    id int auto_increment primary key not null ,
+    pottime datetime default null ,
+    poster varchar(32) not null ,
+    hander varchar(32) null ,
+    handtime datetime default null ,
+    finalhander varchar(32) null ,
+    finalhandtime datetime default null ,
+    toolcode varchar(32) not null
+)charset = utf8 , engine = InnoDB;
+
+/* 采购入库信息记录表 */
+create table addnewrecord(
+    id int auto_increment primary key not null ,
+    poster varchar(32) not null ,
+    posttime datetime default null ,
+    firsthander varchar(32) null ,
+    firsthandtime datetime default null ,
+    finalhander varchar(32) null ,
+    finalhandtime datetime null
+)charset = utf8 , engine = InnoDB;
 
 /* 一本正经的捏造数据 */
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values

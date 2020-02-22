@@ -61,4 +61,20 @@ class Operatorii extends Controller
 
         return view('operatorii@operatorii/allRerecordInWorkcell',compact('ret'));
     }
+
+    public function postDestory($code,$username) {
+        /*
+         * 两件事
+         * 1. 改变tool里面的destorystatus 为 1
+         * 2. 在destoryrecord 中新增一条记录
+         * */
+        $sta1 = model('tool')->postDestorystatus($code);
+        $sta2 = model('destoryrecord')->addDestoryrecord($code,$username);
+
+        if($sta1 && $sta2) {
+            $this->success('提交报废申请成功','http://localhost:8000/operatorii/'.$username);
+        } else {
+            $this->error('提交失败','http://localhost:8000/operatorii/'.$username);
+        }
+    }
 }

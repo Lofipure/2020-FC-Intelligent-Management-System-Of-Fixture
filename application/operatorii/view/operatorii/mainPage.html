@@ -61,7 +61,7 @@
                 {elseif $element.repairstatus == 0}
                 <a href="" class="btn btn-info btn-xs disabled">无需操作</a>
                 {/if}
-                <a href="" class="btn btn-danger btn-xs">提交报废申请</a>
+                <a href="http://localhost:8000/operatorii/postDestory/{$element.code}/{$username}" class="btn btn-danger btn-xs">提交报废申请</a>
             </td>
         </tr>
         {/foreach}

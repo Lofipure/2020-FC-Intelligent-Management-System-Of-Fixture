@@ -68,4 +68,17 @@ class Tool extends Model
         $tool->repairstatus = 0;
         return $tool->save();
    }
+
+   public function postDestorystatus($code) {
+        $tool = Tool::get(self::where('code','=',$code));
+        $tool->destorystatus = 1;
+        return $tool->save();
+   }
+
+   public function firstTrialDestory($code) {
+        $tool = Tool::get(self::where('code','=',$code));
+        $tool->destorystatus = 2;
+        return $tool->save();
+   }
+
 }

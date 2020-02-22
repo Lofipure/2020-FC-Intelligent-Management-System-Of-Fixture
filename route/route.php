@@ -40,10 +40,12 @@ Route::get('/operatorii/handelRepair/:code/:username','@operatorii/Operatorii/ha
 Route::get('/operatorii/finishRepair/:code/:username','@operatorii/Operatorii/finishRepair');
 Route::get('/operatorii/ierecord/:workcell','@operatorii/Operatorii/seeAllIeRecord');
 Route::get('/operatorii/showRepair/:workcell','@operatorii/Operatorii/showRepairRecord');
+Route::get('/operatorii/postDestory/:code/:username','@operatorii/Operatorii/postDestory');
 # Supervisor 页面的相关路由
-
-
-
+Route::get('/supervisor/:username','@supervisor/Supervisor/showMainPage');
+Route::get('/supervisor/ierecord/:workcell','@supervisor/Supervisor/seeAllIeRecord');
+Route::get('/supervisor/rerecord/:workcell','@supervisor/Supervisor/showRepairRecord');
+Route::get('/supervisor/trialDestory/:code/:username','@supervisor/Supervisor/trialDestory');
 # Manager 页面的相关路由
 
 
