@@ -67,4 +67,15 @@ class Supervisor extends Controller
         }
         return view('supervisor@Supervisor/allDerecordInWorkcell',compact('ret'));
     }
+
+    public function handelAdddNew($code,$username) {
+        $sta1 = model('tool')->supervisorHandelAdd($code);
+        $sta2 = model('addnewrecord')->firstTrialAddNew($code,$username);
+
+        if($sta2 && $sta1) {
+            $this->success('处理成功','http://localhost:8000/supervisor/'.$username);
+        } else {
+            $this->error('处理失败','http://localhost:8000/supervisor/'.$username);
+        }
+    }
 }

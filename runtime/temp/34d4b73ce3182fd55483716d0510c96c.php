@@ -1,4 +1,4 @@
-<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\supervisor\view\Supervisor\mainPage.html";i:1582356581;}*/ ?>
+<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\supervisor\view\Supervisor\mainPage.html";i:1582422404;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -54,6 +54,14 @@
                 <?php else: ?>
                 已经完成初审
                 <?php endif; ?>
+                <br>
+                <?php if($element['buystatus'] == 0): ?>
+                初级管理员已经提交申请，请您审核
+                <?php elseif($element['buystatus'] == 1): ?>
+                审核成功，等待经理终审
+                <?php else: ?>
+                通过审核，投入运营
+                <?php endif; ?>
             </td>
             <td>
                 <?php if($element['destorystatus'] == 0): ?>
@@ -62,6 +70,17 @@
                 <a href="http://localhost:8000/supervisor/trialDestory/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-danger btn-xs">初审请求</a>
                 <?php else: ?>
                 <a href="" class="btn btn-success btn-xs disabled">初审完成无需操作</a>
+                <?php endif; ?>
+                <br>
+                <?php if($element['buystatus'] == 0): ?>
+                <!--初级管理员已经提交申请，请您审核-->
+                <a href="http://localhost:8000/supervisor/handelAdd/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">同意审核</a>
+                <?php elseif($element['buystatus'] == 1): ?>
+                <!--审核成功，等待经理终审-->
+                <a href="" class="btn btn-success btn-xs disabled">审核完成，无需操作</a>
+                <?php else: ?>
+                <!--通过审核，投入运营-->
+                <a href="" class="btn btn-success btn-xs disabled">正在运营</a>
                 <?php endif; ?>
             </td>
         </tr>

@@ -53,6 +53,14 @@
                 {else/}
                 已经完成初审
                 {/if}
+                <br>
+                {if $element.buystatus == 0}
+                初级管理员已经提交申请，请您审核
+                {elseif $element.buystatus == 1}
+                审核成功，等待经理终审
+                {else/}
+                通过审核，投入运营
+                {/if}
             </td>
             <td>
                 {if $element.destorystatus == 0}
@@ -61,6 +69,17 @@
                 <a href="http://localhost:8000/supervisor/trialDestory/{$element.code}/{$username}" class="btn btn-danger btn-xs">初审请求</a>
                 {else/}
                 <a href="" class="btn btn-success btn-xs disabled">初审完成无需操作</a>
+                {/if}
+                <br>
+                {if $element.buystatus == 0}
+                <!--初级管理员已经提交申请，请您审核-->
+                <a href="http://localhost:8000/supervisor/handelAdd/{$element.code}/{$username}" class="btn btn-success btn-xs">同意审核</a>
+                {elseif $element.buystatus == 1}
+                <!--审核成功，等待经理终审-->
+                <a href="" class="btn btn-success btn-xs disabled">审核完成，无需操作</a>
+                {else/}
+                <!--通过审核，投入运营-->
+                <a href="" class="btn btn-success btn-xs disabled">正在运营</a>
                 {/if}
             </td>
         </tr>

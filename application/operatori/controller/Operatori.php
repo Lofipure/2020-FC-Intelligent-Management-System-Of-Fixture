@@ -14,8 +14,9 @@ class Operatori extends Controller
     }
 
     public function addNew(Request $request) {
-        return model('tool')->addNewTool($request->post());
-
+        $sta1 = model('tool')->addNewTool($request->post());
+        $sta2 = model('addnewrecord')->addNewRecord($request->post());
+        return $sta1 && $sta2;
     }
 
     public function submitRepairApplication($code,$username) {

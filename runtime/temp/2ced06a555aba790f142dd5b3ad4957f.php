@@ -1,4 +1,4 @@
-<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582292425;}*/ ?>
+<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582421178;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -65,6 +65,7 @@
                     <div class="form-group">
                         <label for="">所属工作部</label>
                         <input type="text" name="workcell" class="form-control">
+                        <input type="hidden" name="poster" value="<?php echo htmlentities($username); ?>">
                     </div>
                 </form>
             </div>

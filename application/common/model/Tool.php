@@ -81,4 +81,9 @@ class Tool extends Model
         return $tool->save();
    }
 
+   public function supervisorHandelAdd($code) {
+        $tool = Tool::get(self::where('code','=',$code));
+        $tool->buystatus = 1;
+        return $tool->save();
+   }
 }

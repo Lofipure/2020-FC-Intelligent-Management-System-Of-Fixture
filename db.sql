@@ -99,6 +99,7 @@ create table destoryrecord(
 /* 采购入库信息记录表 */
 create table addnewrecord(
     id int auto_increment primary key not null ,
+    toolcode varchar(32) not null ,
     poster varchar(32) not null ,
     posttime datetime default null ,
     firsthander varchar(32) null ,
