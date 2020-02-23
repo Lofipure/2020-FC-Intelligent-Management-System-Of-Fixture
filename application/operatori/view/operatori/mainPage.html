@@ -108,31 +108,25 @@
             <td>{$element.owner}</td>
             <td>{$element.workcell}</td>
             <td>
-                <ul>
-                    <li>
-                        {if $element.IEstatus == 1}
-                            {$element.IEnormal}请求使用该夹具
-                        {elseif  $element.IEstatus == 2/}
-                            已借出，等待{$element.IEnormal}归还
-                        {else }
-                            可借
-                        {/if}
-                    </li>
-                    <li>
-                        {if $element.repairstatus == 0}
-                        可以提出报修请求
-                        {elseif $element.repairstatus == 1}
-                        已提交请求
-                        {/if}
-                    </li>
-                    <li>
-                        {if $element.buystatus == 0}
-                        初级用户已经发出请求
-                        {elseif $element.buystatus == 1}
-                        监管员初审进购请求
-                        {/if}
-                    </li>
-                </ul>
+                {if $element.IEstatus == 1}
+                    {$element.IEnormal}请求使用该夹具
+                {elseif  $element.IEstatus == 2/}
+                    已借出，等待{$element.IEnormal}归还
+                {else }
+                    可借
+                {/if}
+                <br>
+                {if $element.repairstatus == 0}
+                可以提出报修请求
+                {elseif $element.repairstatus == 1}
+                已提交请求
+                {/if}
+                <br>
+                {if $element.buystatus == 0}
+                初级用户已经发出请求
+                {elseif $element.buystatus == 1}
+                监管员初审进购请求
+                {/if}
             </td>
             <td>
                 <a href="http://localhost:8000/operatori/handelApp/{$element.code}/{$username}" class="btn btn-info btn-xs">同意员工请求</a><br>

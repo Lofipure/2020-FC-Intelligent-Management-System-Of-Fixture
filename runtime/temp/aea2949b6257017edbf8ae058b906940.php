@@ -1,4 +1,4 @@
-<?php /*a:1:{s:106:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\manager\view\Manager\mainPage.html";i:1582428767;}*/ ?>
+<?php /*a:1:{s:106:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\manager\view\Manager\mainPage.html";i:1582437807;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +14,12 @@
 </head>
 <body>
 <div class="container">
+    <br>
+    <a href="http://localhost:8000/manager/showAddRecord/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">查看部门夹具采购入库记录</a>
+    <a href="http://localhost:8000/manager/showIeRecord/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">查看部门夹具进出库记录</a>
+    <a href="http://localhost:8000/manager/showRequireRecord/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">查看部门夹具报修记录</a>
+    <a href="http://localhost:8000/manager/showDestoryRecord/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">查看部门夹具报废记录</a>
+    <br><br>
     <table class="table-responsive table table-hover">
         <tr>
             <th>夹具代码</th>
@@ -42,6 +48,7 @@
             <td><?php echo htmlentities($element['owner']); ?></td>
             <td><?php echo htmlentities($element['workcell']); ?></td>
             <td>
+                报废：
                 <?php if($element['destorystatus'] == 0): ?>
                 设备正常运转
                 <?php elseif($element['destorystatus'] == 1): ?>
@@ -50,10 +57,23 @@
                 监管员初审完成，等待您处理
                 <?php endif; ?>
                 <br>
+                采购：
+                <?php if($element['buystatus'] == 0): ?>
+                初级用户发出请求等待监管员处理
+                <?php elseif($element['buystatus'] == 1): ?>
+                监管员处理完毕等待您处理
+                <?php elseif($element['buystatus'] == 2): ?>
+                正常运行
+                <?php endif; ?>
             </td>
             <td>
                 <?php if($element['destorystatus'] == 2): ?>
                 <a href="http://localhost:8000/manger/destory/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">执行操作</a>
+                <?php else: ?>
+                <a href="" class="btn btn-success btn-xs disabled">无需操作</a>
+                <?php endif; ?><br>
+                <?php if($element['buystatus'] == 1): ?>
+                <a href="" class="btn btn-success btn-xs">允许采购入库</a>
                 <?php else: ?>
                 <a href="" class="btn btn-success btn-xs disabled">无需操作</a>
                 <?php endif; ?>

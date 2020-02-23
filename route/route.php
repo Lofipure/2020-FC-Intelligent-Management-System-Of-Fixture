@@ -49,7 +49,11 @@ Route::get('/supervisor/showAddRecord/:username','@supervisor/Supervisor/showAdd
 # Manager 页面的相关路由
 Route::get('/manager/:username','@manager/Manager/showMainPage');
 Route::get('/manger/destory/:code/:username','@manager/Manager/destoryTool');
-
+Route::get('/manager/Manager/:code/:username','@manager/Manager/addNewTool');
+Route::get('/manager/showDestoryRecord/:username','@manager/Manager/showDestoryRecord');
+Route::get('/manager/showAddRecord/:username','@manager/Manager/showAddRecord');
+Route::get('/manager/showIeRecord/:username','@manager/Manager/showIeRecord');
+Route::get('/manager/showRequireRecord/:username','@manager/Manager/showRequireRecord');
 # Normal 页面的相关路由
 Route::get('/normal/:username','@normal/Normal/showMainPage');
 Route::get('/normal/lend/:code/:username','@normal/Normal/lendTool');

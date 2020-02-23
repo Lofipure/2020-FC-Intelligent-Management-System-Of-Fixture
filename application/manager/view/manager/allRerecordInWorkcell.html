@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <tr>
+            <th>夹具代码</th>
+            <th>提交时间</th>
+            <th>提交人</th>
+            <th>开始报修时间</th>
+            <th>完成时间</th>
+            <th>操作人</th>
+        </tr>
+        {foreach $ret as $index => $element}
+        <tr>
+            <td>{$element.toolid}</td>
+            <td>{$element.posttime}</td>
+            <td>{$element.poster}</td>
+            <td>
+                {if $element.outtime}
+                {$element.outtime}
+                {else/}
+                高级管理员未处理
+                {/if}
+            </td>
+            <td>
+                {if $element.intime}
+                {$element.intime}
+                {else/}
+                高级管理员未处理
+                {/if}
+            </td>
+            <td>
+                {if $element.hander}
+                {$element.hander}
+                {else/}
+                高级管理员未处理
+                {/if}
+            </td>
+        </tr>
+        {/foreach}
+    </table>
+</div>
+</body>
+</html>

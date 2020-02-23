@@ -1,4 +1,4 @@
-<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582421178;}*/ ?>
+<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582433817;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -109,31 +109,25 @@
             <td><?php echo htmlentities($element['owner']); ?></td>
             <td><?php echo htmlentities($element['workcell']); ?></td>
             <td>
-                <ul>
-                    <li>
-                        <?php if($element['IEstatus'] == 1): ?>
-                            <?php echo htmlentities($element['IEnormal']); ?>请求使用该夹具
-                        <?php elseif($element['IEstatus'] == 2): ?>
-                            已借出，等待<?php echo htmlentities($element['IEnormal']); ?>归还
-                        <?php else: ?>
-                            可借
-                        <?php endif; ?>
-                    </li>
-                    <li>
-                        <?php if($element['repairstatus'] == 0): ?>
-                        可以提出报修请求
-                        <?php elseif($element['repairstatus'] == 1): ?>
-                        已提交请求
-                        <?php endif; ?>
-                    </li>
-                    <li>
-                        <?php if($element['buystatus'] == 0): ?>
-                        初级用户已经发出请求
-                        <?php elseif($element['buystatus'] == 1): ?>
-                        监管员初审进购请求
-                        <?php endif; ?>
-                    </li>
-                </ul>
+                <?php if($element['IEstatus'] == 1): ?>
+                    <?php echo htmlentities($element['IEnormal']); ?>请求使用该夹具
+                <?php elseif($element['IEstatus'] == 2): ?>
+                    已借出，等待<?php echo htmlentities($element['IEnormal']); ?>归还
+                <?php else: ?>
+                    可借
+                <?php endif; ?>
+                <br>
+                <?php if($element['repairstatus'] == 0): ?>
+                可以提出报修请求
+                <?php elseif($element['repairstatus'] == 1): ?>
+                已提交请求
+                <?php endif; ?>
+                <br>
+                <?php if($element['buystatus'] == 0): ?>
+                初级用户已经发出请求
+                <?php elseif($element['buystatus'] == 1): ?>
+                监管员初审进购请求
+                <?php endif; ?>
             </td>
             <td>
                 <a href="http://localhost:8000/operatori/handelApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-info btn-xs">同意员工请求</a><br>
