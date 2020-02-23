@@ -10,15 +10,31 @@
     <script src="/static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/admin/index/loginPage.css">
 </head>
 <body>
 <div class="container">
-    <div class="text-center">用户登录</div>
-    <form action="http://localhost:8000/login" method="post">
-        <input type="text" name="username"><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="登录">
+
+    <form action="http://localhost:8000/login" method="post" id="loginForm" class="clearfix">
+        <div class="text-center">
+            <h2>工夹具管理系统</h2>
+            <h3>用户登录</h3>
+        </div>
+        <div class="form-group col-xs-12">
+            <label for="" class="control-label"></label>
+            <input type="text" name="username" class="form-control" placeholder="账号">
+        </div>
+        <div class="form-group col-xs-12">
+            <label for="" class="control-label"></label>
+            <input type="password" name="password" class="form-control" placeholder="密码">
+        </div>
+        <div class="col-xs-3"></div>
+        <div class="form-group col-xs-6">
+            <label for="" class="control-label"></label>
+            <input type="submit" value="登录" class="form-control btn btn-info">
+        </div>
     </form>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,17 @@
+html,body,.container {
+    height: 100%;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+body {
+    background-color: #3e3e51;
+}
+#loginForm {
+    background-color: #fff;
+    border-radius: 3%;
+    padding: 20px;
+    width: 40%;
+    margin: 0 auto;
+}
