@@ -78,4 +78,18 @@ class Supervisor extends Controller
             $this->error('处理失败','http://localhost:8000/supervisor/'.$username);
         }
     }
+
+    public function showAddRecord($username) {
+        $workcell = model('user')->fromUsernameGetWorkcell($username);
+        $codeInWorkcell = model('tool')->fromWorkcellGetCode($workcell);
+        $infoInAd = model('addnewrecord')->getAllInfo();
+        $ret = array();
+
+        foreach ($infoInAd as $index => $item) {
+            if(in_array($item['toolcode'],$codeInWorkcell)) {
+                array_push($ret,$item);
+            }
+        }
+        return view('supervisor@Supervisor/allAddRecordInWorkcell',compact('ret'));
+    }
 }

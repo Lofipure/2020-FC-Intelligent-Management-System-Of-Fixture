@@ -1,4 +1,4 @@
-<?php /*a:1:{s:106:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\manager\view\Manager\mainPage.html";i:1582381518;}*/ ?>
+<?php /*a:1:{s:106:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\manager\view\Manager\mainPage.html";i:1582428767;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,6 +26,8 @@
             <th>保养点检周期</th>
             <th>负责人</th>
             <th>所属工作部</th>
+            <th>状态</th>
+            <th>操作</th>
         </tr>
         <?php foreach($data as $index =>  $element): ?>
         <tr>
@@ -39,9 +41,28 @@
             <td><?php echo htmlentities($element['pmperiod']); ?></td>
             <td><?php echo htmlentities($element['owner']); ?></td>
             <td><?php echo htmlentities($element['workcell']); ?></td>
+            <td>
+                <?php if($element['destorystatus'] == 0): ?>
+                设备正常运转
+                <?php elseif($element['destorystatus'] == 1): ?>
+                高级用户提出报废申请，监管员初审中
+                <?php elseif($element['destorystatus'] == 2): ?>
+                监管员初审完成，等待您处理
+                <?php endif; ?>
+                <br>
+            </td>
+            <td>
+                <?php if($element['destorystatus'] == 2): ?>
+                <a href="http://localhost:8000/manger/destory/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">执行操作</a>
+                <?php else: ?>
+                <a href="" class="btn btn-success btn-xs disabled">无需操作</a>
+                <?php endif; ?>
+            </td>
         </tr>
         <?php endforeach; ?>
     </table>
 </div>
+<script type="text/javascript">
+</script>
 </body>
 </html>

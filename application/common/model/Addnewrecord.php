@@ -21,4 +21,8 @@ class Addnewrecord extends Model
         $record->firsthandtime = date('Y-m-d H:i:s');
         return $record->save();
     }
+
+    public function getAllInfo() {
+        return Addnewrecord::select();
+    }
 }

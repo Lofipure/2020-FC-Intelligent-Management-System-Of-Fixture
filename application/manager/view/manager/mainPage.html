@@ -25,6 +25,8 @@
             <th>保养点检周期</th>
             <th>负责人</th>
             <th>所属工作部</th>
+            <th>状态</th>
+            <th>操作</th>
         </tr>
         {foreach $data as $index =>  $element}
         <tr>
@@ -38,9 +40,28 @@
             <td>{$element.pmperiod}</td>
             <td>{$element.owner}</td>
             <td>{$element.workcell}</td>
+            <td>
+                {if $element.destorystatus == 0}
+                设备正常运转
+                {elseif $element.destorystatus == 1}
+                高级用户提出报废申请，监管员初审中
+                {elseif $element.destorystatus == 2}
+                监管员初审完成，等待您处理
+                {/if}
+                <br>
+            </td>
+            <td>
+                {if $element.destorystatus == 2}
+                <a href="http://localhost:8000/manger/destory/{$element.code}/{$username}" class="btn btn-success btn-xs">执行操作</a>
+                {else/}
+                <a href="" class="btn btn-success btn-xs disabled">无需操作</a>
+                {/if}
+            </td>
         </tr>
         {/foreach}
     </table>
 </div>
+<script type="text/javascript">
+</script>
 </body>
 </html>

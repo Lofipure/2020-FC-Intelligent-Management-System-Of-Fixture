@@ -25,12 +25,6 @@ Route::get('/admin/delete/:username','@admin/Admin/deleteUser');
 # OperatorI 页面的相关路由
 Route::get('/operatori/:username','@operatori/Operatori/showMainPage');
 Route::post('/operatori/addNew','@operatori/Operatori/addNew');
-/*
- * 简写一下对于addNew的设计就去睡觉，明天再写
- * 1. addNew三个步骤，OperatorI提交申请，buyStatus初始化为0
- * 2. Supervisor初审，buyStatus变为1
- * 3. Manager终审，buyStatus变为2
- * */
 Route::get('/operatori/submitApp/:code/:username','@operatori/Operatori/submitRepairApplication');
 Route::get('/operatori/handelApp/:code/:retusername','@operatori/Operatori/handelIeStatus');
 Route::get('/operatori/seeAllRecord/:workcell','@operatori/Operatori/seeAllRecord');
@@ -50,9 +44,11 @@ Route::get('/supervisor/rerecord/:workcell','@supervisor/Supervisor/showRepairRe
 Route::get('/supervisor/trialDestory/:code/:username','@supervisor/Supervisor/trialDestory');
 Route::get('/supervisor/browseDestoryRecord/:username','@supervisor/Supervisor/browseDestoryRecord');
 Route::get('/supervisor/handelAdd/:code/:username','@supervisor/Supervisor/handelAdddNew');
+Route::get('/supervisor/showAddRecord/:username','@supervisor/Supervisor/showAddRecord');
+
 # Manager 页面的相关路由
 Route::get('/manager/:username','@manager/Manager/showMainPage');
-
+Route::get('/manger/destory/:code/:username','@manager/Manager/destoryTool');
 
 # Normal 页面的相关路由
 Route::get('/normal/:username','@normal/Normal/showMainPage');

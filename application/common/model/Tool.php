@@ -86,4 +86,10 @@ class Tool extends Model
         $tool->buystatus = 1;
         return $tool->save();
    }
+
+   public function managerFinalDestory($code) {
+        /*$tool = Tool::get(self::where('code','=',$code));
+        return $tool->delete();*/
+        return Tool::destroy(self::where('code','=',$code));
+   }
 }

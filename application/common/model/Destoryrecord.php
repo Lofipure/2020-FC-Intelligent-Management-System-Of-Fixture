@@ -26,4 +26,12 @@ class Destoryrecord extends Model
     public function getAllInfo() {
         return Destoryrecord::select();
     }
+
+    public function finalTrialDestoryRecord($code,$username) {
+        $record = Destoryrecord::get(self::where('toolcode','=',$code)->where('finalhandtime','=',NULL));
+
+        $record->finalhander = model('user')->fromUsernameGetName($username);
+        $record->finalhandtime = date('Y-m-d H:i:s');
+        return $record->save();
+    }
 }
