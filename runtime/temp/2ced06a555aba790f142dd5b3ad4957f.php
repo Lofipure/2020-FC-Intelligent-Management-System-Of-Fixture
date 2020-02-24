@@ -1,4 +1,4 @@
-<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582433817;}*/ ?>
+<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582537914;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,9 +11,31 @@
     <script src="/static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/operatori/mainPage.css">
 </head>
 <body>
-<br><br>
+<!--导航栏设计-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">
+                工夹具管理系统
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 0">
+                <li><a href="" data-toggle="modal" data-target="#addModel">提交采购入库申请</a></li>
+                <li><a href="http://localhost:8000/operatori/seeAllRecord/<?php echo htmlentities($workcell); ?>">查看本部门的借出记录</a></li>
+                <!--<li><a href="" data-toggle="modal" data-target="#registerModal">注册新用户</a></li>-->
+                <li><a href="http://localhost:8000/">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <!-- 初级用户提价申请模态框 -->
 <div class="modal fade" tabindex="-1" id="addModel">
     <div class="modal-dialog">
@@ -76,22 +98,18 @@
     </div>
 </div>
 <div class="container">
-    <!--<h1>初级用户主界面</h1>-->
-    <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#addModel">提交采购入库申请</a>
-    <a href="http://localhost:8000/operatori/seeAllRecord/<?php echo htmlentities($workcell); ?>" class="btn btn-info btn-xs">查看本部门的借出记录</a>
-    <br><br>
-    <table class="table table-hover table-responsive text-center">
+    <table class="table table-hover table-responsive">
         <tr>
             <th>夹具代码</th>
             <th>夹具名称</th>
             <th>所属大类</th>
             <th>夹具模组</th>
             <th>夹具料号</th>
-            <th>配备数量</th>
+            <th class="shouldHidden">配备数量</th>
             <th>用途</th>
-            <th>保养点检周期</th>
-            <th>负责人</th>
-            <th>所属工作部</th>
+            <th class="shouldHidden">保养点检周期</th>
+            <th class="shouldHidden">负责人</th>
+            <th class="shouldHidden">所属工作部</th>
             <th>当前状态</th>
             <th>操作</th>
         </tr>
@@ -103,22 +121,24 @@
             <td><?php echo htmlentities($element['familyid']); ?></td>
             <td><?php echo htmlentities($element['model']); ?></td>
             <td><?php echo htmlentities($element['partno']); ?></td>
-            <td><?php echo htmlentities($element['upl']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['upl']); ?></td>
             <td><?php echo htmlentities($element['usefor']); ?></td>
-            <td><?php echo htmlentities($element['pmperiod']); ?></td>
-            <td><?php echo htmlentities($element['owner']); ?></td>
-            <td><?php echo htmlentities($element['workcell']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['pmperiod']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['owner']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['workcell']); ?></td>
             <td>
+                进出库：
                 <?php if($element['IEstatus'] == 1): ?>
-                    <?php echo htmlentities($element['IEnormal']); ?>请求使用该夹具
+                    线上工人请求
                 <?php elseif($element['IEstatus'] == 2): ?>
-                    已借出，等待<?php echo htmlentities($element['IEnormal']); ?>归还
+                    等待归还
                 <?php else: ?>
                     可借
                 <?php endif; ?>
                 <br>
+                报修：
                 <?php if($element['repairstatus'] == 0): ?>
-                可以提出报修请求
+                可以请求
                 <?php elseif($element['repairstatus'] == 1): ?>
                 已提交请求
                 <?php endif; ?>

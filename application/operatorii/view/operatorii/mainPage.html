@@ -12,11 +12,27 @@
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
 </head>
 <body>
-<br>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">
+                工夹具管理系统
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 0">
+                <li><a href="http://localhost:8000/operatorii/showRepair/{$workcell}">查看部门夹具的维修记录</a></li>
+                <li><a href="http://localhost:8000/operatorii/ierecord/{$workcell}">查看部门夹具的借出记录</a></li>
+                <li><a href="http://localhost:8000/">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container">
-    <a href="http://localhost:8000/operatorii/showRepair/{$workcell}" class="btn btn-success btn-xs">查看部门夹具的维修记录</a>
-    <a href="http://localhost:8000/operatorii/ierecord/{$workcell}" class="btn-success btn btn-xs">查看部门夹具的借出记录</a>
-    <br><br>
     <table class="table table-hover table-responsive text-center">
         <tr>
             <th>夹具代码</th>
