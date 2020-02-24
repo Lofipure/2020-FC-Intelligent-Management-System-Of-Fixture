@@ -1,4 +1,4 @@
-<?php /*a:1:{s:104:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\admin\modifyPage.html";i:1582076158;}*/ ?>
+<?php /*a:1:{s:104:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\admin\modifyPage.html";i:1582523010;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,40 +13,58 @@
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
 </head>
 <body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">
+                工夹具管理系统
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 0">
+                <li><a href="http://localhost:8000/admin">返回</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container">
     <h2><?php echo htmlentities($ret['name']); ?>信息修改</h2>
     <form action="http://localhost:8000/admin/handelModify" class="form form-horizontal" method="post">
-        <div class="form-group">
-            <label for="">用户名</label>
+        <div class="form-group has-success">
+            <label for="" class="control-label">用户名</label>
             <input type="text" name="username" value="<?php echo htmlentities($ret['username']); ?>" readonly class="form-control">
         </div>
-        <div class="form-group">
-            <label for="">姓名</label>
+        <div class="form-group has-success">
+            <label for="" class="control-label">姓名</label>
             <input type="text" name="name" value="<?php echo htmlentities($ret['name']); ?>" readonly class="form-control">
         </div>
-        <div class="form-group">
-            <label for="">密码</label>
-            <input type="password" name="password" class="form-control">
+        <div class="form-group" id="inputPasswordBox">
+            <label for="inputPassword" class="control-label">密码</label>
+            <input type="password" name="password" class="form-control" id="inputPassword">
         </div>
-        <div class="form-group">
-            <label for="">请再次输入密码</label>
-            <input type="password" class="form-control">
+        <div class="form-group" id="inputPasswordTwiceBox">
+            <label for="inputPasswordTwice" class="control-label">请再次输入密码</label>
+            <input type="password" class="form-control" id="inputPasswordTwice">
         </div>
-        <div class="form-group">
-            <label for="">电话号码</label>
-            <input type="tel" class="form-control" placeholder="<?php echo htmlentities($ret['telephone']); ?>" name="telephone">
+        <div class="form-group" id="inputTelBox">
+            <label for="inputTel" class="control-label">电话号码</label>
+            <input type="tel" class="form-control" placeholder="<?php echo htmlentities($ret['telephone']); ?>" name="telephone" id="inputTel">
         </div>
-        <div class="form-group">
-            <label for="">邮箱</label>
-            <input type="email" class="form-control" placeholder="<?php echo htmlentities($ret['email']); ?>" name="email">
+        <div class="form-group" id="inputEmailBox">
+            <label for="inputEmail" class="control-label">邮箱</label>
+            <input type="email" class="form-control" placeholder="<?php echo htmlentities($ret['email']); ?>" name="email" id="inputEmail">
         </div>
-        <div class="form-group">
-            <label for="">部门</label>
-            <input type="text" class="form-control" placeholder="<?php echo htmlentities($ret['workcell']); ?>" name="workcell">
+        <div class="form-group" id="inputWorkcellBox">
+            <label for="inputWorkcell" class="control-label">部门</label>
+            <input type="text" class="form-control" placeholder="<?php echo htmlentities($ret['workcell']); ?>" name="workcell" id="inputWorkcell">
         </div>
-        <div class="form-group">
-            <label for="">职务</label>
-            <select name="role" id="" class="form-control">
+        <div class="form-group" id="inputRoleBox">
+            <label for="inputRole" class="control-label">职务</label>
+            <select name="role" id="inputRole" class="form-control">
                 <option value="<?php echo htmlentities($ret['role']); ?>">
                     <?php if($ret['role'] == 0): ?> 管理员
                     <?php elseif($ret['role'] == 1): ?> 初级用户
@@ -65,10 +83,11 @@
             </select>
         </div>
         <div class="form-group">
-            <label for=""></label>
-            <input type="submit" value="修改" class="btn btn-success">
+            <label for="" class="control-label"></label>
+            <input type="submit" value="修改" class="btn btn-success" id="submit">
         </div>
     </form>
 </div>
+<script src="/static/js/admin/admin/modifyPage.js"></script>
 </body>
 </html>

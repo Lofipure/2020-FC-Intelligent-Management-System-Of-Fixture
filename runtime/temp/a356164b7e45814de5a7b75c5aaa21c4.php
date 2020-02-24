@@ -1,4 +1,4 @@
-<?php /*a:1:{s:103:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html";i:1582475229;}*/ ?>
+<?php /*a:1:{s:103:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html";i:1582505004;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
