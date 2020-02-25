@@ -17,7 +17,7 @@
     <div class="container">
         <div class="navbar-header">
             <a href="" class="navbar-brand">
-                工夹具管理系统
+                工夹具管理系统&nbsp;&nbsp;&nbsp;OperatorII
             </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                 <span class="sr-only">切换导航</span>
@@ -108,7 +108,15 @@
                             {/if}
                         </li>
                         <li>
+                            {if $element.destorystatus == 0}
                             <a href="http://localhost:8000/operatorii/postDestory/{$element.code}/{$username}">提交报废申请</a>
+                            {elseif $element.destorystatus == 1}
+                            <a href="">无需操作</a>
+                            {elseif $element.destorystatus == 2}
+                            <a href="">无需操作</a>
+                            {elseif $element.destorystatus == 3}
+                            <a href="">无需操作</a>
+                            {/if}
                         </li>
                     </ul>
                 </div>

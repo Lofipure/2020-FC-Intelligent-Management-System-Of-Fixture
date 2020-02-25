@@ -83,4 +83,16 @@ class Manager extends Controller
         }
         return view('manager@Manager/allRerecordInWorkcell',compact('ret'));
     }
+
+    public function addNew($code,$username) {
+        $name = model('user')->fromUsernameGetName($username);
+        $sta1 = model('tool')->managerFinalAdd($code);
+        $sta2 = model('addnewrecord')->managerFinalAdd($code,$name);
+
+        if($sta1 && $sta2) {
+            $this->success('处理成功','http://localhost:8000/manager/'.$username);
+        } else {
+            $this->error('处理失败','http://localhost:8000/manager/'.$username);
+        }
+    }
 }

@@ -54,6 +54,8 @@ Route::get('/manager/showDestoryRecord/:username','@manager/Manager/showDestoryR
 Route::get('/manager/showAddRecord/:username','@manager/Manager/showAddRecord');
 Route::get('/manager/showIeRecord/:username','@manager/Manager/showIeRecord');
 Route::get('/manager/showRequireRecord/:username','@manager/Manager/showRequireRecord');
+Route::get('/manager/addNew/:code/:username','@manager/Manager/addNew');
+
 # Normal 页面的相关路由
 Route::get('/normal/:username','@normal/Normal/showMainPage');
 Route::get('/normal/lend/:code/:username','@normal/Normal/lendTool');

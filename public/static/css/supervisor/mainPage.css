@@ -1,0 +1,15 @@
+@media (max-width: 992px) {
+    .shouldHidden {
+        display: none;
+    }
+}
+#operate > li > a{
+    padding: 5px;
+}
+#operate > li {
+    height: 30px;
+}
+#status > li{
+    padding: 3px;
+    height: 30px;
+}

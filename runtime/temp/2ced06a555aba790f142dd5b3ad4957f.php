@@ -1,4 +1,4 @@
-<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582591746;}*/ ?>
+<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582599686;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
     <div class="container">
         <div class="navbar-header">
             <a href="" class="navbar-brand">
-                工夹具管理系统
+                工夹具管理系统&nbsp;&nbsp;&nbsp;OperatorI
             </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                 <span class="sr-only">切换导航</span>

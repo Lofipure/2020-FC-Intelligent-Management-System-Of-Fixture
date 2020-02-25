@@ -1,4 +1,4 @@
-<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html";i:1582594842;}*/ ?>
+<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html";i:1582599669;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="navbar-header">
             <a href="" class="navbar-brand">
-                工夹具管理系统
+                工夹具管理系统&nbsp;&nbsp;&nbsp;OperatorII
             </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                 <span class="sr-only">切换导航</span>
@@ -109,7 +109,15 @@
                             <?php endif; ?>
                         </li>
                         <li>
+                            <?php if($element['destorystatus'] == 0): ?>
                             <a href="http://localhost:8000/operatorii/postDestory/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">提交报废申请</a>
+                            <?php elseif($element['destorystatus'] == 1): ?>
+                            <a href="">无需操作</a>
+                            <?php elseif($element['destorystatus'] == 2): ?>
+                            <a href="">无需操作</a>
+                            <?php elseif($element['destorystatus'] == 3): ?>
+                            <a href="">无需操作</a>
+                            <?php endif; ?>
                         </li>
                     </ul>
                 </div>
