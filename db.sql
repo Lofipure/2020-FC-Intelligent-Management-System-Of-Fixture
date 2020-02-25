@@ -111,27 +111,31 @@ create table addnewrecord(
 /* 一本正经的捏造数据 */
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext01','服创测试数据01','测试大类01','测试模组01','FC001',5,'用途1','30','Lofipure',1,0,0,0
+ 'fctext01','服创测试数据01','测试大类01','测试模组01','FC001',5,'用途1','30','Lofipure',1,2,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext02','服创测试数据02','测试大类01','测试模组01','FC002',3,'用途2','30','Lofipure',1,0,0,0
+ 'fctext02','服创测试数据02','测试大类01','测试模组01','FC002',3,'用途2','30','Lofipure',1,2,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext03','服创测试数据03','测试大类02','测试模组02','FC003',3,'用途2','30','Lofipure',2,0,0,0
+ 'fctext03','服创测试数据03','测试大类02','测试模组02','FC003',3,'用途2','30','Lofipure',2,2,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext04','服创测试数据04','测试大类02','测试模组02','FC004',3,'用途2','30','Lofipure',2,0,0,0
+ 'fctext04','服创测试数据04','测试大类02','测试模组02','FC004',3,'用途2','30','Lofipure',2,2,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext05','服创测试数据05','测试大类03','测试模组02','FC005',3,'用途2','30','Lofipure',3,0,0,0
+ 'fctext05','服创测试数据05','测试大类03','测试模组02','FC005',3,'用途2','30','Lofipure',3,2,0,0
 );
 insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
 (
- 'fctext06','服创测试数据06','测试大类03','测试模组02','FC006',3,'用途2','30','Lofipure',4,0,0,0
+ 'fctext06','服创测试数据06','测试大类03','测试模组02','FC006',3,'用途2','30','Lofipure',4,2,0,0
+);
+insert into tool (code, name, familyid, model, partno, upl, usefor, pmperiod, owner, workcell, buystatus, IEstatus, repairstatus) values
+(
+    'fctext07','服创测试数据07','测试大类03','测试模组02','FC006',3,'用途4','30','Lofipure',4,2,0,0
 );
 
 /* 管理员 */

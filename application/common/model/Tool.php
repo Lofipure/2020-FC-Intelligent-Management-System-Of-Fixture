@@ -6,7 +6,10 @@ use think\Model;
 class Tool extends Model
 {
     public function normalGetAll() {
-        return $this->select();
+        return $this->where('buystatus','=',2)
+            ->where('destorystatus','=',0)
+            ->where('repairstatus','=',0)
+            ->select();
     }
 
    public function getAll($workcell) {
