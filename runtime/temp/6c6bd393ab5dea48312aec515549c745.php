@@ -1,4 +1,4 @@
-<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html";i:1582538634;}*/ ?>
+<?php /*a:1:{s:112:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html";i:1582594842;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,6 +11,7 @@
     <script src="/static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/operatorii/mainPage.css">
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -41,12 +42,12 @@
             <th>所属大类</th>
             <th>夹具模组</th>
             <th>夹具料号</th>
-            <th>配备数量</th>
+            <th class="shouldHidden">配备数量</th>
             <th>用途</th>
-            <th>保养点检周期</th>
-            <th>负责人</th>
-            <th>所属工作部</th>
-            <th>状态</th>
+            <th class="shouldHidden">保养点检周期</th>
+            <th class="shouldHidden">负责人</th>
+            <th class="shouldHidden">所属工作部</th>
+            <th>当前状态</th>
             <th>操作</th>
         </tr>
         <?php foreach($tools as $key => $element): ?>
@@ -56,29 +57,62 @@
             <td><?php echo htmlentities($element['familyid']); ?></td>
             <td><?php echo htmlentities($element['model']); ?></td>
             <td><?php echo htmlentities($element['partno']); ?></td>
-            <td><?php echo htmlentities($element['upl']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['upl']); ?></td>
             <td><?php echo htmlentities($element['usefor']); ?></td>
-            <td><?php echo htmlentities($element['pmperiod']); ?></td>
-            <td><?php echo htmlentities($element['owner']); ?></td>
-            <td><?php echo htmlentities($element['workcell']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['pmperiod']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['owner']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['workcell']); ?></td>
             <td>
-                <?php if($element['repairstatus'] == 0): ?>
-                正常运转
-                <?php elseif($element['repairstatus'] == 1): ?>
-                初级管理员提交报修申请
-                <?php elseif($element['repairstatus'] == 2): ?>
-                正在报修
-                <?php endif; ?>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        当前状态 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="status">
+                        <li>
+                            报修:
+                            <?php if($element['repairstatus'] == 0): ?>
+                            正常运转
+                            <?php elseif($element['repairstatus'] == 1): ?>
+                            初级管理员提交报修申请
+                            <?php elseif($element['repairstatus'] == 2): ?>
+                            正在报修
+                            <?php endif; ?>
+                        </li>
+                        <li>
+                            报废:
+                            <?php if($element['destorystatus'] == 0): ?>
+                            正常运转
+                            <?php elseif($element['destorystatus'] == 1): ?>
+                            已提出申请
+                            <?php elseif($element['destorystatus'] == 2): ?>
+                            初审完成
+                            <?php elseif($element['destorystatus'] == 3): ?>
+                            终审完成
+                            <?php endif; ?>
+                        </li>
+                    </ul>
+                </div>
             </td>
             <td>
-                <?php if($element['repairstatus'] == 2): ?>
-                <a href="http://localhost:8000//operatorii/finishRepair/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-success btn-xs">检修完成</a>
-                <?php elseif($element['repairstatus'] == 1): ?>
-                <a href="http://localhost:8000/operatorii/handelRepair/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-warning btn-xs">处理报修申请</a>
-                <?php elseif($element['repairstatus'] == 0): ?>
-                <a href="" class="btn btn-info btn-xs disabled">无需操作</a>
-                <?php endif; ?>
-                <a href="http://localhost:8000/operatorii/postDestory/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-danger btn-xs">提交报废申请</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        执行操作 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="operate">
+                        <li>
+                            <?php if($element['repairstatus'] == 2): ?>
+                            <a href="http://localhost:8000//operatorii/finishRepair/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">检修完成</a>
+                            <?php elseif($element['repairstatus'] == 1): ?>
+                            <a href="http://localhost:8000/operatorii/handelRepair/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">处理报修申请</a>
+                            <?php elseif($element['repairstatus'] == 0): ?>
+                            <a href="">无需操作</a>
+                            <?php endif; ?>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/operatorii/postDestory/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">提交报废申请</a>
+                        </li>
+                    </ul>
+                </div>
             </td>
         </tr>
         <?php endforeach; ?>

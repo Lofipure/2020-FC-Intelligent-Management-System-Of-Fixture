@@ -10,6 +10,7 @@
     <script src="/static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/operatorii/mainPage.css">
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -40,12 +41,12 @@
             <th>所属大类</th>
             <th>夹具模组</th>
             <th>夹具料号</th>
-            <th>配备数量</th>
+            <th class="shouldHidden">配备数量</th>
             <th>用途</th>
-            <th>保养点检周期</th>
-            <th>负责人</th>
-            <th>所属工作部</th>
-            <th>状态</th>
+            <th class="shouldHidden">保养点检周期</th>
+            <th class="shouldHidden">负责人</th>
+            <th class="shouldHidden">所属工作部</th>
+            <th>当前状态</th>
             <th>操作</th>
         </tr>
         {foreach $tools as $key => $element}
@@ -55,29 +56,62 @@
             <td>{$element.familyid}</td>
             <td>{$element.model}</td>
             <td>{$element.partno}</td>
-            <td>{$element.upl}</td>
+            <td class="shouldHidden">{$element.upl}</td>
             <td>{$element.usefor}</td>
-            <td>{$element.pmperiod}</td>
-            <td>{$element.owner}</td>
-            <td>{$element.workcell}</td>
+            <td class="shouldHidden">{$element.pmperiod}</td>
+            <td class="shouldHidden">{$element.owner}</td>
+            <td class="shouldHidden">{$element.workcell}</td>
             <td>
-                {if $element.repairstatus == 0}
-                正常运转
-                {elseif $element.repairstatus == 1}
-                初级管理员提交报修申请
-                {elseif $element.repairstatus == 2}
-                正在报修
-                {/if}
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        当前状态 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="status">
+                        <li>
+                            报修:
+                            {if $element.repairstatus == 0}
+                            正常运转
+                            {elseif $element.repairstatus == 1}
+                            初级管理员提交报修申请
+                            {elseif $element.repairstatus == 2}
+                            正在报修
+                            {/if}
+                        </li>
+                        <li>
+                            报废:
+                            {if $element.destorystatus == 0}
+                            正常运转
+                            {elseif $element.destorystatus == 1}
+                            已提出申请
+                            {elseif $element.destorystatus == 2}
+                            初审完成
+                            {elseif $element.destorystatus == 3}
+                            终审完成
+                            {/if}
+                        </li>
+                    </ul>
+                </div>
             </td>
             <td>
-                {if $element.repairstatus == 2}
-                <a href="http://localhost:8000//operatorii/finishRepair/{$element.code}/{$username}" class="btn btn-success btn-xs">检修完成</a>
-                {elseif $element.repairstatus == 1}
-                <a href="http://localhost:8000/operatorii/handelRepair/{$element.code}/{$username}" class="btn btn-warning btn-xs">处理报修申请</a>
-                {elseif $element.repairstatus == 0}
-                <a href="" class="btn btn-info btn-xs disabled">无需操作</a>
-                {/if}
-                <a href="http://localhost:8000/operatorii/postDestory/{$element.code}/{$username}" class="btn btn-danger btn-xs">提交报废申请</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        执行操作 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="operate">
+                        <li>
+                            {if $element.repairstatus == 2}
+                            <a href="http://localhost:8000//operatorii/finishRepair/{$element.code}/{$username}">检修完成</a>
+                            {elseif $element.repairstatus == 1}
+                            <a href="http://localhost:8000/operatorii/handelRepair/{$element.code}/{$username}">处理报修申请</a>
+                            {elseif $element.repairstatus == 0}
+                            <a href="">无需操作</a>
+                            {/if}
+                        </li>
+                        <li>
+                            <a href="http://localhost:8000/operatorii/postDestory/{$element.code}/{$username}">提交报废申请</a>
+                        </li>
+                    </ul>
+                </div>
             </td>
         </tr>
         {/foreach}

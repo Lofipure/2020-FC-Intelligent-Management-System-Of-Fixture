@@ -1,0 +1,3603 @@
+---------------------------------------------------------------
+
+[2020-02-25T08:04:30+08:00] 127.0.0.1 GET localhost:8000/
+[运行时间：0.436421s] [吞吐率：2.29req/s] [内存消耗：1,785.72kb] [文件加载：62]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => '@admin/Index/drawLoginPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-25T08:04:40+08:00] 127.0.0.1 POST localhost:8000/login
+[运行时间：0.389136s] [吞吐率：2.57req/s] [内存消耗：3,257.34kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => '@admin/Index/handleLogin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost:8000',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+  'password' => 'admin',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008691s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.030388s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.005090s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000440s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:04:43+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.237713s] [吞吐率：4.21req/s] [内存消耗：3,220.52kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005453s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.010357s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000592s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:09:30+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.249240s] [吞吐率：4.01req/s] [内存消耗：3,372.55kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010091s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002056s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001707s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000331s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:10:12+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.138047s] [吞吐率：7.24req/s] [内存消耗：3,376.52kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000969s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002094s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001949s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000427s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:10:26+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.149004s] [吞吐率：6.71req/s] [内存消耗：3,376.51kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009855s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002113s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001962s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000374s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:13:22+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.163626s] [吞吐率：6.11req/s] [内存消耗：3,368.40kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011794s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002180s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.002061s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000414s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:13:49+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.144728s] [吞吐率：6.91req/s] [内存消耗：3,372.45kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010052s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002395s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.002224s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000559s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:14:56+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.161064s] [吞吐率：6.21req/s] [内存消耗：3,376.45kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010077s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002097s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001879s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000464s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:15:49+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.175071s] [吞吐率：5.71req/s] [内存消耗：3,376.49kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010698s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002073s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001975s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000424s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:16:34+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.066943s] [吞吐率：14.94req/s] [内存消耗：3,221.49kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001050s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001964s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.002005s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000519s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:16:58+08:00] 127.0.0.1 GET localhost:8000/operatori/seeAllRecord/1
+[运行时间：0.123306s] [吞吐率：8.11req/s] [内存消耗：3,198.57kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/seeAllRecord/<workcell>',
+  'route' => '@operatori/Operatori/seeAllRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\allRecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010234s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001944s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.002224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ierecord` [ RunTime:0.009016s ]
+[ sql ] [ SQL ] SELECT * FROM `ierecord` [ RunTime:0.000395s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:17:09+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.068764s] [吞吐率：14.54req/s] [内存消耗：3,221.44kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010248s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001929s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001841s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000443s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:17:11+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.071176s] [吞吐率：14.05req/s] [内存消耗：3,221.44kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010853s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002494s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001887s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000421s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:17:44+08:00] 127.0.0.1 GET localhost:8000/
+[运行时间：0.045554s] [吞吐率：21.95req/s] [内存消耗：1,786.02kb] [文件加载：62]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => '@admin/Index/drawLoginPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-25T08:17:50+08:00] 127.0.0.1 POST localhost:8000/login
+[运行时间：0.066670s] [吞吐率：15.00req/s] [内存消耗：3,257.33kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => '@admin/Index/handleLogin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost:8000',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+  'password' => 'admin',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004011s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002810s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000419s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:17:52+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.158372s] [吞吐率：6.31req/s] [内存消耗：3,211.05kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010070s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002312s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001944s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000455s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:20:27+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.071168s] [吞吐率：14.05req/s] [内存消耗：3,221.53kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010145s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002135s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.002196s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000383s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:24:04+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.165948s] [吞吐率：6.03req/s] [内存消耗：3,377.09kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010639s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000942s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001930s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000407s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:24:25+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.164682s] [吞吐率：6.07req/s] [内存消耗：3,377.08kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011111s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001523s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000477s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:24:55+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.181039s] [吞吐率：5.52req/s] [内存消耗：3,377.80kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009901s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000440s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:25:32+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.179430s] [吞吐率：5.57req/s] [内存消耗：3,377.73kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011012s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000435s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:27:35+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.181250s] [吞吐率：5.52req/s] [内存消耗：3,377.89kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010332s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001002s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000513s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:27:40+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.071390s] [吞吐率：14.01req/s] [内存消耗：3,222.81kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010888s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000828s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:29:25+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.207191s] [吞吐率：4.83req/s] [内存消耗：3,377.88kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010051s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000963s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000498s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:29:48+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.167086s] [吞吐率：5.98req/s] [内存消耗：3,377.88kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011441s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000423s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:30:34+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.169531s] [吞吐率：5.90req/s] [内存消耗：3,377.88kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001028s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000406s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:30:46+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.168929s] [吞吐率：5.92req/s] [内存消耗：3,377.89kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010592s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000880s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000333s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:30:54+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.168949s] [吞吐率：5.92req/s] [内存消耗：3,377.88kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010042s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002746s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000810s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000383s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:31:20+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.168686s] [吞吐率：5.93req/s] [内存消耗：3,377.72kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000969s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000393s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:33:19+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.170807s] [吞吐率：5.85req/s] [内存消耗：3,377.80kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010609s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:33:33+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.156977s] [吞吐率：6.37req/s] [内存消耗：3,377.72kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001113s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001937s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000713s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:35:03+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.184045s] [吞吐率：5.43req/s] [内存消耗：3,377.78kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010846s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000414s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:35:18+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.181181s] [吞吐率：5.52req/s] [内存消耗：3,377.72kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009691s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001139s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001672s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000429s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:39:02+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.176381s] [吞吐率：5.67req/s] [内存消耗：3,378.53kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009794s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001063s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001018s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000549s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:39:32+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.173362s] [吞吐率：5.77req/s] [内存消耗：3,378.52kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010061s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001082s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000449s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:39:49+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.171958s] [吞吐率：5.82req/s] [内存消耗：3,378.52kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009809s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000470s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:40:43+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.172609s] [吞吐率：5.79req/s] [内存消耗：3,378.91kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009981s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000938s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:45:28+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.156887s] [吞吐率：6.37req/s] [内存消耗：3,378.00kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000930s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000943s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000855s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000379s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:46:31+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.070520s] [吞吐率：14.18req/s] [内存消耗：3,222.98kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010801s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000444s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:46:38+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.090191s] [吞吐率：11.09req/s] [内存消耗：3,223.00kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010238s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001393s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001264s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000524s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:47:13+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.077363s] [吞吐率：12.93req/s] [内存消耗：3,222.98kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011091s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001525s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001357s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000598s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:47:39+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.079749s] [吞吐率：12.54req/s] [内存消耗：3,223.00kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010554s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001215s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001074s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000690s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:47:53+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.072217s] [吞吐率：13.85req/s] [内存消耗：3,222.98kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010215s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001770s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001376s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000405s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:47:59+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.064766s] [吞吐率：15.44req/s] [内存消耗：3,222.98kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010308s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001015s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000553s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:48:22+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.054647s] [吞吐率：18.30req/s] [内存消耗：3,222.91kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001164s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000387s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:49:07+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.155017s] [吞吐率：6.45req/s] [内存消耗：3,377.98kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009774s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001017s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000517s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:49:24+08:00] 127.0.0.1 GET localhost:8000/
+[运行时间：0.040846s] [吞吐率：24.48req/s] [内存消耗：1,786.02kb] [文件加载：62]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => '@admin/Index/drawLoginPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-25T08:49:31+08:00] 127.0.0.1 POST localhost:8000/login
+[运行时间：0.073045s] [吞吐率：13.69req/s] [内存消耗：3,257.33kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => '@admin/Index/handleLogin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost:8000',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+  'password' => 'admin',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009848s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000272s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:49:32+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.064523s] [吞吐率：15.50req/s] [内存消耗：3,211.45kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010868s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000780s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:52:36+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.075161s] [吞吐率：13.30req/s] [内存消耗：3,223.00kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010304s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000400s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:52:45+08:00] 127.0.0.1 GET localhost:8000/operatori/seeAllRecord/1
+[运行时间：0.068221s] [吞吐率：14.66req/s] [内存消耗：3,198.85kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/seeAllRecord/<workcell>',
+  'route' => '@operatori/Operatori/seeAllRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\allRecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010713s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ierecord` [ RunTime:0.002153s ]
+[ sql ] [ SQL ] SELECT * FROM `ierecord` [ RunTime:0.000373s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:52:49+08:00] 127.0.0.1 GET localhost:8000/
+[运行时间：0.045760s] [吞吐率：21.85req/s] [内存消耗：1,786.09kb] [文件加载：62]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => '@admin/Index/drawLoginPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-25T08:53:00+08:00] 127.0.0.1 POST localhost:8000/login
+[运行时间：0.067601s] [吞吐率：14.79req/s] [内存消耗：3,257.34kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => '@admin/Index/handleLogin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost:8000',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+  'password' => 'admin',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010642s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000711s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000467s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:53:02+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.083725s] [吞吐率：11.94req/s] [内存消耗：3,211.46kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010002s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001116s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000491s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:57:58+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.082338s] [吞吐率：12.15req/s] [内存消耗：3,211.66kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009765s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001020s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000607s ]
+---------------------------------------------------------------
+
+[2020-02-25T08:59:16+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.147920s] [吞吐率：6.76req/s] [内存消耗：3,354.66kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010583s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000515s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:02:32+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.278030s] [吞吐率：3.60req/s] [内存消耗：3,388.77kb] [文件加载：82]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011448s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000903s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000430s ]
+[ error ] [0]语法解析错误: syntax error, unexpected 'elseif' (T_ELSEIF)[C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\runtime\temp\6c6bd393ab5dea48312aec515549c745.php:81]
+---------------------------------------------------------------
+
+[2020-02-25T09:02:44+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.163114s] [吞吐率：6.13req/s] [内存消耗：3,363.55kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010205s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001282s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000945s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000435s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:16:21+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.066088s] [吞吐率：15.13req/s] [内存消耗：3,216.74kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001370s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000936s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001304s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000531s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:21:16+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.175116s] [吞吐率：5.71req/s] [内存消耗：3,388.87kb] [文件加载：82]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010585s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001167s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001008s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000481s ]
+[ error ] [0]语法解析错误: syntax error, unexpected 'elseif' (T_ELSEIF)[C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\runtime\temp\6c6bd393ab5dea48312aec515549c745.php:91]
+---------------------------------------------------------------
+
+[2020-02-25T09:21:25+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.165981s] [吞吐率：6.02req/s] [内存消耗：3,364.13kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009849s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001008s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000944s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000766s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:28:07+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.175693s] [吞吐率：5.69req/s] [内存消耗：3,365.56kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001172s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000421s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:28:40+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.195796s] [吞吐率：5.11req/s] [内存消耗：3,365.42kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009942s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001251s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000480s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:29:59+08:00] 127.0.0.1 GET localhost:8000/
+[运行时间：0.044903s] [吞吐率：22.27req/s] [内存消耗：1,786.02kb] [文件加载：62]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => '@admin/Index/drawLoginPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\admin\view\index\loginPage.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-25T09:30:05+08:00] 127.0.0.1 POST localhost:8000/login
+[运行时间：0.052331s] [吞吐率：19.11req/s] [内存消耗：3,257.34kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => '@admin/Index/handleLogin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '35',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://localhost:8000',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+  'password' => 'admin',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000847s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000402s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:30:07+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.067762s] [吞吐率：14.76req/s] [内存消耗：3,222.77kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010629s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000896s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000348s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:36:22+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.063031s] [吞吐率：15.87req/s] [内存消耗：3,218.49kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000986s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000975s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000427s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:36:23+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.070674s] [吞吐率：14.15req/s] [内存消耗：3,218.49kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011014s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.000969s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001050s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:36:51+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.176414s] [吞吐率：5.67req/s] [内存消耗：3,365.41kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000961s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000404s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:40:46+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.166716s] [吞吐率：6.00req/s] [内存消耗：3,364.38kb] [文件加载：79]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010409s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001041s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000978s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000377s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:41:02+08:00] 127.0.0.1 GET localhost:8000/operatorii/showRepair/1
+[运行时间：0.131717s] [吞吐率：7.59req/s] [内存消耗：3,204.69kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/showRepair/<workcell>',
+  'route' => '@operatorii/Operatorii/showRepairRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatorii/operatorIIone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\allRerecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010485s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000861s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `repairrecord` [ RunTime:0.011804s ]
+[ sql ] [ SQL ] SELECT * FROM `repairrecord` [ RunTime:0.000520s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:48:43+08:00] 127.0.0.1 GET localhost:8000/operatori/operatorone
+[运行时间：0.064586s] [吞吐率：15.48req/s] [内存消耗：3,222.98kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/<username>',
+  'route' => '@operatori/Operatori/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html [ array (
+  0 => 'allTool',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001058s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorone' LIMIT 1 [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001220s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000463s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:48:45+08:00] 127.0.0.1 GET localhost:8000/operatorii/operatorIIone
+[运行时间：0.069386s] [吞吐率：14.41req/s] [内存消耗：3,217.46kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/<username>',
+  'route' => '@operatorii/Operatorii/showMainPage',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'username' => 'operatorIIone',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'operatorIIone',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\mainPage.html [ array (
+  0 => 'tools',
+  1 => 'workcell',
+  2 => 'username',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009817s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001679s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'operatorIIone' LIMIT 1 [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT * FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000438s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:48:47+08:00] 127.0.0.1 GET localhost:8000/operatorii/ierecord/1
+[运行时间：0.118133s] [吞吐率：8.47req/s] [内存消耗：3,201.24kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/ierecord/<workcell>',
+  'route' => '@operatorii/Operatorii/seeAllIeRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatorii/operatorIIone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\allIeRecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009647s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001082s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000732s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ierecord` [ RunTime:0.002164s ]
+[ sql ] [ SQL ] SELECT * FROM `ierecord` [ RunTime:0.000322s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:48:56+08:00] 127.0.0.1 GET localhost:8000/operatori/seeAllRecord/1
+[运行时间：0.070339s] [吞吐率：14.22req/s] [内存消耗：3,198.85kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatori/seeAllRecord/<workcell>',
+  'route' => '@operatori/Operatori/seeAllRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatori/operatorone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\allRecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010468s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ierecord` [ RunTime:0.002232s ]
+[ sql ] [ SQL ] SELECT * FROM `ierecord` [ RunTime:0.000439s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:49:02+08:00] 127.0.0.1 GET localhost:8000/operatorii/showRepair/1
+[运行时间：0.074816s] [吞吐率：13.37req/s] [内存消耗：3,204.97kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/showRepair/<workcell>',
+  'route' => '@operatorii/Operatorii/showRepairRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatorii/operatorIIone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\allRerecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010240s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.003569s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `repairrecord` [ RunTime:0.001931s ]
+[ sql ] [ SQL ] SELECT * FROM `repairrecord` [ RunTime:0.000395s ]
+---------------------------------------------------------------
+
+[2020-02-25T09:49:04+08:00] 127.0.0.1 GET localhost:8000/operatorii/ierecord/1
+[运行时间：0.063247s] [吞吐率：15.81req/s] [内存消耗：3,201.52kb] [文件加载：77]
+[ info ] [ LANG ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'operatorii/ierecord/<workcell>',
+  'route' => '@operatorii/Operatorii/seeAllIeRecord',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'workcell' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+  'sec-fetch-dest' => 'document',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'referer' => 'http://localhost:8000/operatorii/operatorIIone',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Phpstorm-303d7c42=e129bfad-1129-431f-b04c-948be0331183; Webstorm-9235571e=80d86858-8ca6-4e05-abdd-49eb9ffdee5e; pgv_pvi=3636225024; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'workcell' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatorii\view\operatorii\allIeRecordInWorkcell.html [ array (
+  0 => 'ret',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010647s ] mysql:host=127.0.0.1;port=3308;dbname=fc;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tool` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT `code` FROM `tool` WHERE  `workcell` = 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ierecord` [ RunTime:0.001716s ]
+[ sql ] [ SQL ] SELECT * FROM `ierecord` [ RunTime:0.000314s ]

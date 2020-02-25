@@ -1,4 +1,4 @@
-<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582537914;}*/ ?>
+<?php /*a:1:{s:110:"C:\Another\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1582591746;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -98,7 +98,7 @@
     </div>
 </div>
 <div class="container">
-    <table class="table table-hover table-responsive">
+    <table class="table table-hover table-responsive text-center">
         <tr>
             <th>夹具代码</th>
             <th>夹具名称</th>
@@ -127,31 +127,66 @@
             <td class="shouldHidden"><?php echo htmlentities($element['owner']); ?></td>
             <td class="shouldHidden"><?php echo htmlentities($element['workcell']); ?></td>
             <td>
-                进出库：
-                <?php if($element['IEstatus'] == 1): ?>
-                    线上工人请求
-                <?php elseif($element['IEstatus'] == 2): ?>
-                    等待归还
-                <?php else: ?>
-                    可借
-                <?php endif; ?>
-                <br>
-                报修：
-                <?php if($element['repairstatus'] == 0): ?>
-                可以请求
-                <?php elseif($element['repairstatus'] == 1): ?>
-                已提交请求
-                <?php endif; ?>
-                <br>
-                <?php if($element['buystatus'] == 0): ?>
-                初级用户已经发出请求
-                <?php elseif($element['buystatus'] == 1): ?>
-                监管员初审进购请求
-                <?php endif; ?>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        当前状态 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="status">
+                        <li>
+                            进出库:
+                            <?php if($element['IEstatus'] == 1): ?>
+                            线上工人请求
+                            <?php elseif($element['IEstatus'] == 2): ?>
+                            等待归还
+                            <?php else: ?>
+                            可借
+                            <?php endif; ?>
+                        </li>
+                        <li>
+                            报修:
+                            <?php if($element['repairstatus'] == 0): ?>
+                            可以请求
+                            <?php elseif($element['repairstatus'] == 1): ?>
+                            已提交请求
+                            <?php endif; ?>
+                        </li>
+                        <li>
+                            状态:
+                            <?php if($element['buystatus'] == 0): ?>
+                            已经发出请求
+                            <?php elseif($element['buystatus'] == 1): ?>
+                            初审请求
+                            <?php elseif($element['buystatus'] == 2): ?>
+                            正常使用
+                            <?php endif; ?>
+                        </li>
+                    </ul>
+                </div>
             </td>
             <td>
-                <a href="http://localhost:8000/operatori/handelApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-info btn-xs">同意员工请求</a><br>
-                <a href="http://localhost:8000/operatori/submitApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>" class="btn btn-warning btn-xs">提交报修申请</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        执行操作 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="operate">
+                        <li>
+                            <?php if($element['IEstatus'] == 1): ?>
+                            <a href="http://localhost:8000/operatori/handelApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">同意申请</a><br>
+                            <?php elseif($element['IEstatus'] == 2): ?>
+                            <a href="" class="disabled">无需操作</a><br>
+                            <?php else: ?>
+                            <a href="" class="disabled">无需操作</a><br>
+                            <?php endif; ?>
+                        </li>
+                        <li>
+                            <?php if($element['repairstatus'] == 0): ?>
+                            <a href="http://localhost:8000/operatori/submitApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">提交报修申请</a><br>
+                            <?php elseif($element['repairstatus'] == 1): ?>
+                            <a href="" class="disabled">无需操作</a><br>
+                            <?php endif; ?>
+                        </li>
+                    </ul>
+                </div>
             </td>
         </tr>
         <?php endforeach; ?>

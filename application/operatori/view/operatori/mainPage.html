@@ -97,7 +97,7 @@
     </div>
 </div>
 <div class="container">
-    <table class="table table-hover table-responsive">
+    <table class="table table-hover table-responsive text-center">
         <tr>
             <th>夹具代码</th>
             <th>夹具名称</th>
@@ -126,31 +126,66 @@
             <td class="shouldHidden">{$element.owner}</td>
             <td class="shouldHidden">{$element.workcell}</td>
             <td>
-                进出库：
-                {if $element.IEstatus == 1}
-                    线上工人请求
-                {elseif  $element.IEstatus == 2/}
-                    等待归还
-                {else }
-                    可借
-                {/if}
-                <br>
-                报修：
-                {if $element.repairstatus == 0}
-                可以请求
-                {elseif $element.repairstatus == 1}
-                已提交请求
-                {/if}
-                <br>
-                {if $element.buystatus == 0}
-                初级用户已经发出请求
-                {elseif $element.buystatus == 1}
-                监管员初审进购请求
-                {/if}
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        当前状态 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="status">
+                        <li>
+                            进出库:
+                            {if $element.IEstatus == 1}
+                            线上工人请求
+                            {elseif  $element.IEstatus == 2/}
+                            等待归还
+                            {else }
+                            可借
+                            {/if}
+                        </li>
+                        <li>
+                            报修:
+                            {if $element.repairstatus == 0}
+                            可以请求
+                            {elseif $element.repairstatus == 1}
+                            已提交请求
+                            {/if}
+                        </li>
+                        <li>
+                            状态:
+                            {if $element.buystatus == 0}
+                            已经发出请求
+                            {elseif $element.buystatus == 1}
+                            初审请求
+                            {elseif $element.buystatus == 2}
+                            正常使用
+                            {/if}
+                        </li>
+                    </ul>
+                </div>
             </td>
             <td>
-                <a href="http://localhost:8000/operatori/handelApp/{$element.code}/{$username}" class="btn btn-info btn-xs">同意员工请求</a><br>
-                <a href="http://localhost:8000/operatori/submitApp/{$element.code}/{$username}" class="btn btn-warning btn-xs">提交报修申请</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        执行操作 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="operate">
+                        <li>
+                            {if $element.IEstatus == 1}
+                            <a href="http://localhost:8000/operatori/handelApp/{$element.code}/{$username}">同意申请</a><br>
+                            {elseif  $element.IEstatus == 2/}
+                            <a href="" class="disabled">无需操作</a><br>
+                            {else }
+                            <a href="" class="disabled">无需操作</a><br>
+                            {/if}
+                        </li>
+                        <li>
+                            {if $element.repairstatus == 0}
+                            <a href="http://localhost:8000/operatori/submitApp/{$element.code}/{$username}">提交报修申请</a><br>
+                            {elseif $element.repairstatus == 1}
+                            <a href="" class="disabled">无需操作</a><br>
+                            {/if}
+                        </li>
+                    </ul>
+                </div>
             </td>
         </tr>
         {/foreach}
