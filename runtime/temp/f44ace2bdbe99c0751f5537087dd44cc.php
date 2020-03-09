@@ -1,3 +1,4 @@
+<?php /*a:1:{s:117:"C:\Another\服创\2020-FC-Intelligent-Management-System-Of-Fixture\application\operatori\view\operatori\mainPage.html";i:1583725066;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right" style="margin-top: 0">
                 <li><a href="" data-toggle="modal" data-target="#addModel">提交采购入库申请</a></li>
-                <li><a href="http://localhost:8000/operatori/seeAllRecord/{$workcell}">查看本部门的借出记录</a></li>
+                <li><a href="http://localhost:8000/operatori/seeAllRecord/<?php echo htmlentities($workcell); ?>">查看本部门的借出记录</a></li>
                 <!--<li><a href="" data-toggle="modal" data-target="#registerModal">注册新用户</a></li>-->
                 <li><a href="http://localhost:8000/">退出</a></li>
             </ul>
@@ -86,7 +87,7 @@
                     <div class="form-group" id="inputWorkcellBox">
                         <label for="" class="control-label">所属工作部</label>
                         <input type="text" name="workcell" class="form-control" id="inputWorkcell">
-                        <input type="hidden" name="poster" value="{$username}">
+                        <input type="hidden" name="poster" value="<?php echo htmlentities($username); ?>">
                     </div>
                 </form>
             </div>
@@ -114,18 +115,18 @@
             <th>操作</th>
         </tr>
         <!--$allTool-->
-        {foreach $allTool as $key => $element}
+        <?php foreach($allTool as $key => $element): ?>
         <tr>
-            <td>{$element.code}</td>
-            <td>{$element.name}</td>
-            <td>{$element.familyid}</td>
-            <td>{$element.model}</td>
-            <td>{$element.partno}</td>
-            <td class="shouldHidden">{$element.upl}</td>
-            <td>{$element.usefor}</td>
-            <td class="shouldHidden">{$element.pmperiod}</td>
-            <td class="shouldHidden">{$element.owner}</td>
-            <td class="shouldHidden">{$element.workcell}</td>
+            <td><?php echo htmlentities($element['code']); ?></td>
+            <td><?php echo htmlentities($element['name']); ?></td>
+            <td><?php echo htmlentities($element['familyid']); ?></td>
+            <td><?php echo htmlentities($element['model']); ?></td>
+            <td><?php echo htmlentities($element['partno']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['upl']); ?></td>
+            <td><?php echo htmlentities($element['usefor']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['pmperiod']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['owner']); ?></td>
+            <td class="shouldHidden"><?php echo htmlentities($element['workcell']); ?></td>
             <td>
                 <div class="btn-group">
                     <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -134,31 +135,31 @@
                     <ul class="dropdown-menu" id="status">
                         <li>
                             进出库:
-                            {if $element.IEstatus == 1}
+                            <?php if($element['IEstatus'] == 1): ?>
                             线上工人请求
-                            {elseif  $element.IEstatus == 2/}
+                            <?php elseif($element['IEstatus'] == 2): ?>
                             等待归还
-                            {else }
+                            <?php else: ?>
                             可借
-                            {/if}
+                            <?php endif; ?>
                         </li>
                         <li>
                             报修:
-                            {if $element.repairstatus == 0}
+                            <?php if($element['repairstatus'] == 0): ?>
                             可以请求
-                            {elseif $element.repairstatus == 1}
+                            <?php elseif($element['repairstatus'] == 1): ?>
                             已提交请求
-                            {/if}
+                            <?php endif; ?>
                         </li>
                         <li>
                             状态:
-                            {if $element.buystatus == 0}
+                            <?php if($element['buystatus'] == 0): ?>
                             已经发出请求
-                            {elseif $element.buystatus == 1}
+                            <?php elseif($element['buystatus'] == 1): ?>
                             初审请求
-                            {elseif $element.buystatus == 2}
+                            <?php elseif($element['buystatus'] == 2): ?>
                             正常使用
-                            {/if}
+                            <?php endif; ?>
                         </li>
                     </ul>
                 </div>
@@ -170,26 +171,26 @@
                     </button>
                     <ul class="dropdown-menu" id="operate">
                         <li>
-                            {if $element.IEstatus == 1}
-                            <a href="http://localhost:8000/operatori/handelApp/{$element.code}/{$username}">同意申请</a><br>
-                            {elseif  $element.IEstatus == 2/}
+                            <?php if($element['IEstatus'] == 1): ?>
+                            <a href="http://localhost:8000/operatori/handelApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">同意申请</a><br>
+                            <?php elseif($element['IEstatus'] == 2): ?>
                             <a href="" class="disabled">无需操作</a><br>
-                            {else }
+                            <?php else: ?>
                             <a href="" class="disabled">无需操作</a><br>
-                            {/if}
+                            <?php endif; ?>
                         </li>
                         <li>
-                            {if $element.repairstatus == 0}
-                            <a href="http://localhost:8000/operatori/submitApp/{$element.code}/{$username}">提交报修申请</a><br>
-                            {elseif $element.repairstatus == 1}
+                            <?php if($element['repairstatus'] == 0): ?>
+                            <a href="http://localhost:8000/operatori/submitApp/<?php echo htmlentities($element['code']); ?>/<?php echo htmlentities($username); ?>">提交报修申请</a><br>
+                            <?php elseif($element['repairstatus'] == 1): ?>
                             <a href="" class="disabled">无需操作</a><br>
-                            {/if}
+                            <?php endif; ?>
                         </li>
                     </ul>
                 </div>
             </td>
         </tr>
-        {/foreach}
+        <?php endforeach; ?>
     </table>
 </div>
 <script src="/static/js/operatori/mainPage.js"></script>

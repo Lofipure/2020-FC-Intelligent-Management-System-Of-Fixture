@@ -63,11 +63,6 @@ class Operatorii extends Controller
     }
 
     public function postDestory($code,$username) {
-        /*
-         * 两件事
-         * 1. 改变tool里面的destorystatus 为 1
-         * 2. 在destoryrecord 中新增一条记录
-         * */
         $sta1 = model('tool')->postDestorystatus($code);
         $sta2 = model('destoryrecord')->addDestoryrecord($code,$username);
 
