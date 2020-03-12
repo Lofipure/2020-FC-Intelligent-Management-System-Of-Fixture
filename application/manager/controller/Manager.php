@@ -86,6 +86,10 @@ class Manager extends Controller
 
     public function addNew($code,$username) {
         $name = model('user')->fromUsernameGetName($username);
+        /*
+         * 1：改变tool表中的buystatus
+         * 2：改变addnewrecord
+         * */
         $sta1 = model('tool')->managerFinalAdd($code);
         $sta2 = model('addnewrecord')->managerFinalAdd($code,$name);
 

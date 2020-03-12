@@ -15,7 +15,7 @@ use think\facade\Route;
 Route::get('/','@admin/Index/drawLoginPage');
 Route::post('/login','@admin/Index/handleLogin');
 
-# Admin 页面的相关路由
+# Admin页面相关路由
 Route::get('/admin','@admin/Admin/drawMainPage');
 Route::post('/admin/addNew','@admin/Admin/addNewUser');
 Route::get('/admin/modify/:username','@admin/Admin/modifyUser');

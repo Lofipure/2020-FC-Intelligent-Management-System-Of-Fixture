@@ -25,6 +25,7 @@ class Index extends Controller
             $workcell = model('user')->funGetWorkcell($data);
 
             if($ret == 0) {
+                // return alert_success('登录成功，欢迎管理员：'.$name,'http://localhost:8000/admin');
                 $this->success('登录成功，欢迎管理员：'.$name,'http://localhost:8000/admin');
             } elseif ($ret == 1) {
                 $this->success('登录成功，欢迎初级用户：'.$name,'http://localhost:8000/operatori/'.$data['username']);

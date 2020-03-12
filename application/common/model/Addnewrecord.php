@@ -27,7 +27,7 @@ class Addnewrecord extends Model
     }
 
     public function managerFinalAdd($code,$username) {
-        $record = Addnewrecord::get(self::where('toolcode','=',$code)->where('finalhandtime'),'=',NULL);
+        $record = Addnewrecord::get(self::where('toolcode','=',$code)->where('finalhandtime','=',NULL));
         $record->finalhandtime = date('Y-m-d H:i:s');
         $record->finalhander = model('user')->fromUsernameGetName($username);
         return $record->save();
